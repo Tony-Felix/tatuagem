@@ -1,0 +1,55 @@
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Lista e links */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.nav-list a, .nav-right a {
+  color: #b8b8b8;
+  text-decoration: none;
+  font-weight: 600;
+  padding: .25rem 0;
+  position: relative;
+  display: inline-flex;
+}
+
+.nav-list a:hover, .nav-right a:hover {
+  color: #fff;
+}
+
+.nav-list a::after, .nav-right a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.6s ease;
+}
+
+.nav-list a:hover::after, .nav-right a:hover::after {
+  width: 100%;
+}
+
+/* Centro - AURA */
+.nav-center a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.25rem;
+  transition: text-shadow 0.8s ease;
+}
+
+.nav-center a:hover {
+  text-shadow: 0 0 8px rgba(168,85,247,0.8),
+               0 0 16px rgba(168,85,247,0.6),
+               0 0 24px rgba(168,85,247,0.4);
+}
+

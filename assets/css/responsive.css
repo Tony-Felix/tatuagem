@@ -1,0 +1,146 @@
+:root {
+  --breakpoint-desktop: 1024px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-mobile: 480px;
+}
+
+/* ===================== TABLET ===================== */
+@media (max-width: 1023px) {
+
+  /* Header/Nav */
+  .nav {
+    padding: 1rem 2rem;
+  }
+
+  .nav-center {
+    letter-spacing: 0.2rem;
+  }
+
+  /* Hero */
+  .hero-title {
+    font-size: 4rem;
+    letter-spacing: 0.8rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Gap entre seções */
+  .aura-section,
+  .localizacao-section,
+  .sobre-section {
+    padding: 5rem 1rem;
+  }
+
+  /* FAQ colunas */
+  .faq-content {
+    column-count: 1;
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+
+  /* Contatos */
+  .contatos-card {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-right: auto;
+  }
+}
+
+/* ===================== MOBILE ===================== */
+@media (max-width: 767px) {
+
+  /* ==== HAMBURGUER ==== */
+  .hamburger {
+    display: block;
+    color: #fff;
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2000;
+  }
+
+  /* ==== MENU MOBILE ==== */
+  .nav-left .nav-list,
+  .nav-right {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 1.5rem 0;
+    gap: 1.5rem;
+    text-align: center;
+    z-index: 1500;
+  }
+
+  .nav-left .nav-list.active,
+  .nav-right.active {
+    display: flex;
+  }
+
+  /* Centralizar o AURA */
+  .nav-center {
+    position: relative;
+    margin: 0 auto;
+    transform: none;
+    letter-spacing: 0.15rem;
+  }
+
+  /* Ajuste do header */
+  .site-header {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 0.5rem 1rem;
+  }
+
+  /* Seções */
+  .aura-section,
+  .localizacao-section,
+  .sobre-section {
+    padding: 3rem 1rem;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 50vh;
+    max-width: 90%;
+  }
+
+  .hero-bg {
+    height: 100%;
+    top: 0;
+    transform: translateY(0);
+    background-size: contain;
+    background-position: center;
+  }
+
+  .hero-title {
+    font-size: 2.0rem;
+    letter-spacing: 0.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  /* Hero line */
+  .hero-line {
+    display: none;
+  }
+
+  /* FAQ */
+  .faq-content {
+    column-count: 1;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  /* Contatos */
+  .contatos-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-right: 0;
+  }
+}

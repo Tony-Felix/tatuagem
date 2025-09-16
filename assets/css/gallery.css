@@ -1,0 +1,239 @@
+/* ===================== GALERIA PAGE ===================== */
+body.galeria-page {
+  background: #151515;
+  color: #eee;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.4;
+  height: 100%;
+}
+
+/* ===================== MENU ===================== */
+body.galeria-page .nav {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 1.25rem 3.125rem; /* antes 20px 50px */
+  background: rgba(0,0,0,0.35);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  z-index: 40;
+}
+
+body.galeria-page .nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  letter-spacing: 0.25rem; /* antes 4px */
+  color: #fff;
+}
+
+body.galeria-page .nav-center a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.25rem; /* antes 4px */
+  transition: text-shadow 0.8s ease;
+}
+
+body.galeria-page .nav-center a:hover {
+  text-shadow: 0 0 8px rgba(168, 85, 247, 0.8),
+               0 0 16px rgba(168, 85, 247, 0.6),
+               0 0 24px rgba(168, 85, 247, 0.4);
+}
+
+
+/* ===================== AURA TOPO ===================== */
+.aura-top {
+  position: relative;
+  height: 6.25rem; /* antes 100px */
+}
+
+.aura-top .nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%; /* manter igual, relativo à altura */
+}
+
+/* ===================== TÍTULO / TONY FÉLIX ===================== */
+body.galeria-page .hero {
+  flex-direction: column; /* empilha conteúdo */
+  align-items: center;    /* centraliza tudo */
+  gap: 0;                 /* antes 0px */
+  text-align: center;
+}
+
+body.galeria-page .hero-title {
+  margin: 0;            /* remove margem antiga */
+  padding-top: 1.875rem; /* antes 30px */
+  margin-bottom: 3.125rem; /* antes 50px */
+}
+
+/* ===================== GALERIA ===================== */
+.galeria-section {
+  margin-top: -9.375rem; /* antes -150px */
+  display: flex;
+  justify-content: center;
+  padding: 0 13.75rem;   /* antes 0 220px */
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* sempre 4 colunas */
+  gap: 0.625rem;       /* antes 10px */
+  max-width: 60rem;    /* antes 960px */
+  width: 100%;         /* grid ocupa 100% do container disponível */
+  margin: 0 auto;      /* centraliza a grid */
+}
+
+.galeria-item {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.galeria-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===================== INICIAR CONVERSA GALLERY ===================== */
+.galleryBtn {
+  margin-top: 3.125rem; /* antes 50px */
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: 1.3125rem; /* antes 21px */
+  background-color: #151515;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 0;
+  padding: 0.6875rem 2.25rem; /* antes 11px 36px */
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  letter-spacing: 2px;
+  text-decoration-color: #ffffff;
+  display: inline-block;
+}
+
+.galleryBtn:hover {
+  background-color: #ffffffed;
+  color: #121212;
+}
+
+.iniciarConversaGaleria {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 0;
+}
+
+
+/* ===================== LIGHTBOX ===================== */
+.lightbox {
+  display: none; /* escondido por padrão */
+  position: fixed;
+  inset: 0; /* top, right, bottom, left = 0 */
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* quando ativo */
+.lightbox.active {
+  display: flex;
+}
+
+/* Imagem exibida no centro */
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  box-shadow: 0 0 1.25rem rgba(0,0,0,0.5); /* antes 20px */
+}
+
+/* Botão fechar (X) */
+.close-btn {
+  position: absolute;
+  top: 1.25rem;      /* antes 20px */
+  right: 1.875rem;   /* antes 30px */
+  font-size: 2.1875rem; /* antes 35px */
+  color: #ffffffed;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10000;
+}
+
+/* Setas */
+.arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 1.25rem; /* antes 20px */
+  font-weight: 20; 
+  color: #ffffffed;
+  cursor: pointer;
+  user-select: none;
+  display: none; /* só aparecem via JS */
+  transform: translateY(-50%);
+  padding: 0.625rem;  /* antes 10px */
+  background: rgba(0,0,0,0.3);
+  border-radius: 50%;
+}
+
+/* seta esquerda */
+.arrow.left {
+  left: 1.25rem; /* antes 20px */
+}
+
+/* seta direita */
+.arrow.right {
+  right: 1.25rem; /* antes 20px */
+}
+
+.arrow:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+.galeria-item img {
+  cursor: pointer;
+}
+
+/* ===================== MOBILE — GALERIA ===================== */
+@media (max-width: 767px) {
+  /* BOTÕES */
+  .galleryBtn {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  /* LIGHTBOX ajustes */
+  .close-btn {
+    top: 0.75rem;
+    right: 1rem;
+    font-size: 1.75rem;
+  }
+
+  .arrow {
+    font-size: 1rem;
+    padding: 0.5rem;
+    left: 0.5rem;
+    right: 0.5rem;
+  }
+}
+
