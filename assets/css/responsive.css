@@ -6,141 +6,313 @@
 
 /* ===================== TABLET ===================== */
 @media (max-width: 1023px) {
-
-  /* Header/Nav */
-  .nav {
-    padding: 1rem 2rem;
+  html {
+    font-size: 15px;
   }
 
-  .nav-center {
-    letter-spacing: 0.2rem;
+  .aura-title {
+    font-size: 3.75rem;
+    /* ~60px */
+    -webkit-text-stroke: 2.5px;
+    /* opcional, proporcional ao tamanho */
+    letter-spacing: 0.4rem;
   }
 
-  /* Hero */
-  .hero-title {
-    font-size: 4rem;
-    letter-spacing: 0.8rem;
-    margin-top: 5rem;
-    margin-bottom: 2rem;
+  .consulta-btn {
+    font-size: 1.25rem;
+    /* ~20px */
+    padding: 1.25rem 1.25rem;
+    text-decoration-thickness: 2.5px;
   }
 
-  /* Gap entre seções */
-  .aura-section,
-  .localizacao-section,
-  .sobre-section {
-    padding: 5rem 1rem;
-  }
-
-  /* FAQ colunas */
-  .faq-content {
-    column-count: 1;
-    gap: 2rem;
-    padding: 0 1.5rem;
-  }
-
-  /* Contatos */
-  .contatos-card {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-right: auto;
-  }
-}
-
-/* ===================== MOBILE ===================== */
-@media (max-width: 767px) {
-
-  /* ==== HAMBURGUER ==== */
-  .hamburger {
-    display: block;
-    color: #fff;
-    display: none;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 2000;
-  }
-
-  /* ==== MENU MOBILE ==== */
-  .nav-left .nav-list,
-  .nav-right {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.95);
-    padding: 1.5rem 0;
-    gap: 1.5rem;
-    text-align: center;
-    z-index: 1500;
-  }
-
-  .nav-left .nav-list.active,
-  .nav-right.active {
+  .foto {
+    flex: 1 1 100%;
+    /* ocupa linha inteira */
     display: flex;
+    justify-content: center;
+    /* centraliza horizontal */
+    margin: 1rem 0;
+    /* dá respiro */
   }
 
-  /* Centralizar o AURA */
-  .nav-center {
-    position: relative;
-    margin: 0 auto;
-    transform: none;
-    letter-spacing: 0.15rem;
+  .sobre-inner {
+    gap: 4rem;
+    /* reduz bastante no tablet */
+    justify-content: center;
+    /* garante centralização */
   }
 
-  /* Ajuste do header */
-  .site-header {
-    background: rgba(0, 0, 0, 0.85);
-    padding: 0.5rem 1rem;
+  .formacao {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 3rem;
+    padding-bottom: 0;
   }
 
-  /* Seções */
-  .aura-section,
-  .localizacao-section,
-  .sobre-section {
-    padding: 3rem 1rem;
+  .localizacao-card {
+    margin-top: -4.4rem;
   }
 
-  /* Hero */
-  .hero {
-    min-height: 50vh;
-    max-width: 90%;
+  .localizacao-title {
+    font-size: 3.75rem;
+    -webkit-text-stroke: 2.5px;
+    letter-spacing: 0.4rem;
   }
 
-  .hero-bg {
-    height: 100%;
-    top: 0;
-    transform: translateY(0);
-    background-size: contain;
-    background-position: center;
+  .contatos-items {
+    margin-left: 60px;
+
+    /* Header/Nav */
+    .nav {
+      padding: 1rem 2rem;
+    }
+
+    .nav-center {
+      letter-spacing: 0.2rem;
+    }
+
+    /* Hero */
+    .hero-title {
+      font-size: 4rem;
+      letter-spacing: 0.8rem;
+      margin-top: 5rem;
+      margin-bottom: 2rem;
+      -webkit-text-stroke: 1.5px;
+    }
+
+    /* Gap entre seções */
+    .aura-section,
+    .localizacao-section,
+    .sobre-section {
+      padding: 5rem 1rem;
+    }
+
+    /* FAQ colunas */
+    .faq-content {
+      gap: 2rem;
+      padding: 0 1.5rem;
+    }
+
+    .faq-item:nth-last-child(2),
+    .faq-item:last-child {
+      margin-bottom: 0;
+      /* remove o espaçamento apenas no mobile */
+    }
+
+    /* Contatos */
+    .contatos-card {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-right: auto;
+    }
   }
 
-  .hero-title {
-    font-size: 2.0rem;
-    letter-spacing: 0.2rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
+  /* ===================== MOBILE ===================== */
+  @media (max-width: 767px) {
+    html {
+      font-size: 14px;
+    }
+
+    .aura-title {
+      font-size: 2.5rem;
+      /* ~40px */
+      -webkit-text-stroke: 1.5px;
+      /* opcional */
+      letter-spacing: 0.25rem;
+    }
+
+    .consulta-btn {
+      font-size: 1rem;
+      /* ~16px */
+      padding: 1rem 1rem;
+      text-decoration-thickness: 2px;
+      width: 100%;
+      /* ocupa toda a largura */
+      text-align: center;
+      display: inline-block;
+    }
+
+    .foto {
+      flex: 1 1 100%;
+      display: flex;
+      justify-content: center;
+      margin: 1rem 0;
+    }
+
+    .localizacao-title {
+      font-size: 2.5rem;
+      /* ~40px */
+      -webkit-text-stroke: 1.5px;
+      letter-spacing: 0.25rem;
+    }
+
+    .localizacao-card {
+    margin-top: -1.4rem;
   }
 
-  /* Hero line */
-  .hero-line {
-    display: none;
-  }
+    .contatos-items {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      margin: 0 auto;
+      margin-top: 4.2rem;
+    }
 
-  /* FAQ */
-  .faq-content {
-    column-count: 1;
-    gap: 1.5rem;
-    padding: 0 1rem;
-  }
+    .contatos-items>div {
+      width: 100%;
+      text-align: center;
+    }
 
-  /* Contatos */
-  .contatos-card {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-right: 0;
+    .contatos-items div:last-child {
+      justify-self: center;
+      margin-right: 0;
+    }
+
+    .faq-content {
+      display: none;
+      /* esconde a versão desktop */
+    }
+
+    .faq-content-mobile {
+      display: grid;
+      grid-template-columns: 1fr;
+      /* 1 coluna mobile */
+      gap: 2rem;
+      padding: 0 1.5rem;
+    }
+
+    .faq-content-mobile h3 {
+      font-size: 1.50rem;
+      /* ajuste conforme desejar */
+      line-height: 1.4;
+      /* opcional: melhora legibilidade */
+    }
+
+    .faq-item:nth-last-child(2),
+    .faq-item:last-child {
+      margin-bottom: 0;
+      /* remove o espaçamento apenas no mobile */
+    }
+
+    /* ==== HAMBURGUER ==== */
+    .hamburger {
+      display: block;
+      color: #fff;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 2000;
+    }
+
+    /* ==== MENU ==== */
+    .nav {
+      padding: 0.5rem 1rem;
+    }
+
+    .nav-left .nav-list,
+    .nav-right {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.95);
+      padding: 1.5rem 0;
+      gap: 1.5rem;
+      text-align: center;
+      z-index: 1500;
+    }
+
+    .nav-left .nav-list.active,
+    .nav-right.active {
+      display: flex;
+    }
+
+    /* Centralizar o AURA */
+    .nav-center {
+      position: relative;
+      transform: none;
+      flex: 1;
+      text-align: center;
+      margin-left: -10px;
+    }
+
+    /* Ajuste do header */
+    .site-header {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 0.5rem 1rem;
+    }
+
+    /* Seções */
+    .aura-section,
+    .localizacao-section,
+    .sobre-section {
+      padding: 3rem 1rem;
+    }
+
+    /* Hero atualizado */
+    .hero {
+      width: 100%;
+      height: 100vh;
+      /* ocupa toda a altura da tela */
+      position: relative;
+      /* referência para a imagem de fundo e conteúdo */
+      overflow: hidden;
+      /* esconde possíveis excessos da imagem */
+    }
+
+    .hero-bg {
+      position: absolute;
+      /* encosta no topo e ocupa todo o container */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* substitua pelo seu caminho */
+      background-size: cover;
+      /* cobre todo o container */
+      background-position: center top;
+      /* topo da imagem sempre visível */
+      background-repeat: no-repeat;
+      z-index: 0;
+      /* atrás do conteúdo */
+    }
+
+    .hero-title {
+      position: relative;
+      z-index: 1;
+      /* acima da imagem de fundo */
+      font-size: 3.0rem;
+      letter-spacing: 0.4rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #F5F5F5;
+      -webkit-text-stroke: 1px;
+    }
+
+    /* Hero line */
+    .hero-line {
+      display: none;
+    }
+
+    /* FAQ */
+    .faq-content {
+      column-count: 1;
+      gap: 1.5rem;
+      padding: 0 1rem;
+    }
+
+    /* Contatos */
+    .contatos-card {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-right: 0;
+    }
   }
-}

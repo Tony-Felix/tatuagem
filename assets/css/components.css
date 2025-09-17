@@ -1,4 +1,17 @@
 /* ========================================
+  HWERO LINE
+======================================== */
+.hero-line {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1.2px;
+  background: #fff;
+}
+
+/* ========================================
   BOTÃO INICIAR CONVERSA
 ======================================== */
 .consulta-wrap {
@@ -128,19 +141,22 @@
 .localizacao-title {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 4.5rem;
-  font-weight: 400;
+  font-weight: 350;
   text-transform: uppercase;
   font-style: normal;
   letter-spacing: 0.5rem;
   color: #f5f5f5;
+  -webkit-text-stroke: 3.5px;
 }
 
 .map-wrap {
   max-width: 60.4rem;
-  margin: 0 auto;
   height: 30rem;
   border-radius: 0.5rem;
   overflow: hidden;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .map-wrap iframe {
