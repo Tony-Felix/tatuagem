@@ -64,6 +64,7 @@
 
   .contatos-items {
     margin-left: 60px;
+  }
 
     /* Header/Nav */
     .nav {
@@ -90,6 +91,13 @@
       padding: 5rem 1rem;
     }
 
+    /* Contatos */
+    .contatos-card {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-right: auto;
+    }
+
     /* FAQ colunas */
     .faq-content {
       gap: 2rem;
@@ -102,12 +110,11 @@
       /* remove o espaçamento apenas no mobile */
     }
 
-    /* Contatos */
-    .contatos-card {
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin-right: auto;
+    .footer-spacer {
+      height: 4rem;
+      /* controla o espaço entre FAQ e footer */
     }
+
   }
 
   /* ===================== MOBILE ===================== */
@@ -150,8 +157,8 @@
     }
 
     .localizacao-card {
-    margin-top: -1.4rem;
-  }
+      margin-top: -1.4rem;
+    }
 
     .contatos-items {
       display: flex;
@@ -209,7 +216,11 @@
       z-index: 2000;
     }
 
-    /* ==== MENU ==== */
+    .hamburger.active {
+      color: #000;
+    }
+
+    /* MENU */
     .nav {
       padding: 0.5rem 1rem;
     }
@@ -217,21 +228,55 @@
     .nav-left .nav-list,
     .nav-right {
       display: none;
-      flex-direction: column;
+    }
+
+    .nav-left .nav-list.active {
+      display: block;
       position: absolute;
-      top: 60px;
+      top: 17px;
+      /* aparece logo abaixo do header */
       left: 0;
       right: 0;
-      background: rgba(0, 0, 0, 0.95);
+      background: rgba(248, 248, 240);
       padding: 1.5rem 0;
-      gap: 1.5rem;
       text-align: center;
       z-index: 1500;
     }
 
-    .nav-left .nav-list.active,
     .nav-right.active {
       display: flex;
+      flex-direction: row;
+      /* horizontal */
+      justify-content: center;
+      /* centraliza os itens horizontalmente */
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      /* encosta no topo da nav-right */
+      top: 0;
+      /* ⬅ nav-list encosta no topo da nav-right */
+      left: 0;
+      right: 0;
+      gap: 1rem;
+      /* espaçamento entre os links */
+      background: #f8f8f0;
+      z-index: 1500;
+    }
+
+    .nav-left .nav-list.active a,
+    .nav-right.active a {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      color: #666666;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Opcional: efeito hover */
+    .nav-left .nav-list.active a:hover,
+    .nav-right.active a:hover {
+      color: #000000;
+      /* ainda mais forte ao passar o mouse */
     }
 
     /* Centralizar o AURA */
