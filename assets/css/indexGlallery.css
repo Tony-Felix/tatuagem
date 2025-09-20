@@ -98,21 +98,16 @@ body {
 }
 
 .hero-icon-card {
-  top: 13px;
+  top: 86px;
   position: relative;
   width: 100%;
   height: 100%;
-  display: flex;
   z-index: 2;
-  margin-left: -710px;
+  margin-left: -365px;
 }
 
 .hero-icon {
-  position: absolute;
-  top: -50%;             /* controla quão pra cima */
-  left: 50%;            /* centraliza horizontalmente */
-  transform: translateX(-50%); /* ajusta o centro certinho */
-  width: 60px;         /* aumenta o tamanho */
+  width: 80px;
   height: auto;
 }
 

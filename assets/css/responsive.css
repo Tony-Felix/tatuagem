@@ -18,6 +18,16 @@
     letter-spacing: 0.4rem;
   }
 
+  .hero-icon-card {
+    top: 146px;
+    margin-left: -286px;
+  }
+
+  .hero-icon {
+    width: 60px;
+    height: auto;
+  }
+
   .consulta-btn {
     font-size: 1.25rem;
     /* ~20px */
@@ -66,298 +76,312 @@
     margin-left: 60px;
   }
 
-    /* Header/Nav */
-    .nav {
-      padding: 1rem 2rem;
-    }
-
-    .nav-center {
-      letter-spacing: 0.2rem;
-    }
-
-    /* Hero */
-    .hero-title {
-      font-size: 4rem;
-      letter-spacing: 0.8rem;
-      margin-top: 5rem;
-      margin-bottom: 2rem;
-      -webkit-text-stroke: 1.5px;
-    }
-
-    /* Gap entre seções */
-    .aura-section,
-    .localizacao-section,
-    .sobre-section {
-      padding: 5rem 1rem;
-    }
-
-    /* Contatos */
-    .contatos-card {
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin-right: auto;
-    }
-
-    /* FAQ colunas */
-    .faq-content {
-      gap: 2rem;
-      padding: 0 1.5rem;
-    }
-
-    .faq-item:nth-last-child(2),
-    .faq-item:last-child {
-      margin-bottom: 0;
-      /* remove o espaçamento apenas no mobile */
-    }
-
-    .footer-spacer {
-      height: 4rem;
-      /* controla o espaço entre FAQ e footer */
-    }
-
+  /* Header/Nav */
+  .nav {
+    padding: 1rem 2rem;
   }
 
-  /* ===================== MOBILE ===================== */
-  @media (max-width: 767px) {
-    html {
-      font-size: 14px;
-    }
-
-    .aura-title {
-      font-size: 2.5rem;
-      /* ~40px */
-      -webkit-text-stroke: 1.5px;
-      /* opcional */
-      letter-spacing: 0.25rem;
-    }
-
-    .consulta-btn {
-      font-size: 1rem;
-      /* ~16px */
-      padding: 1rem 1rem;
-      text-decoration-thickness: 2px;
-      width: 100%;
-      /* ocupa toda a largura */
-      text-align: center;
-      display: inline-block;
-    }
-
-    .foto {
-      flex: 1 1 100%;
-      display: flex;
-      justify-content: center;
-      margin: 1rem 0;
-    }
-
-    .localizacao-title {
-      font-size: 2.5rem;
-      /* ~40px */
-      -webkit-text-stroke: 1.5px;
-      letter-spacing: 0.25rem;
-    }
-
-    .localizacao-card {
-      margin-top: -1.4rem;
-    }
-
-    .contatos-items {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-      margin: 0 auto;
-      margin-top: 4.2rem;
-    }
-
-    .contatos-items>div {
-      width: 100%;
-      text-align: center;
-    }
-
-    .contatos-items div:last-child {
-      justify-self: center;
-      margin-right: 0;
-    }
-
-    .faq-content {
-      display: none;
-      /* esconde a versão desktop */
-    }
-
-    .faq-content-mobile {
-      display: grid;
-      grid-template-columns: 1fr;
-      /* 1 coluna mobile */
-      gap: 2rem;
-      padding: 0 1.5rem;
-    }
-
-    .faq-content-mobile h3 {
-      font-size: 1.50rem;
-      /* ajuste conforme desejar */
-      line-height: 1.4;
-      /* opcional: melhora legibilidade */
-    }
-
-    .faq-item:nth-last-child(2),
-    .faq-item:last-child {
-      margin-bottom: 0;
-      /* remove o espaçamento apenas no mobile */
-    }
-
-    /* ==== HAMBURGUER ==== */
-    .hamburger {
-      display: block;
-      color: #fff;
-      font-size: 1.5rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-      z-index: 2000;
-    }
-
-    .hamburger.active {
-      color: #000;
-    }
-
-    /* MENU */
-    .nav {
-      padding: 0.5rem 1rem;
-    }
-
-    .nav-left .nav-list,
-    .nav-right {
-      display: none;
-    }
-
-    .nav-left .nav-list.active {
-      display: block;
-      position: absolute;
-      top: 17px;
-      /* aparece logo abaixo do header */
-      left: 0;
-      right: 0;
-      background: rgba(248, 248, 240);
-      padding: 1.5rem 0;
-      text-align: center;
-      z-index: 1500;
-    }
-
-    .nav-right.active {
-      display: flex;
-      flex-direction: row;
-      /* horizontal */
-      justify-content: center;
-      /* centraliza os itens horizontalmente */
-      padding: 0;
-      margin: 0;
-      position: absolute;
-      /* encosta no topo da nav-right */
-      top: 0;
-      /* ⬅ nav-list encosta no topo da nav-right */
-      left: 0;
-      right: 0;
-      gap: 1rem;
-      /* espaçamento entre os links */
-      background: #f8f8f0;
-      z-index: 1500;
-    }
-
-    .nav-left .nav-list.active a,
-    .nav-right.active a {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 18px;
-      color: #666666;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    /* Opcional: efeito hover */
-    .nav-left .nav-list.active a:hover,
-    .nav-right.active a:hover {
-      color: #000000;
-      /* ainda mais forte ao passar o mouse */
-    }
-
-    /* Centralizar o AURA */
-    .nav-center {
-      position: relative;
-      transform: none;
-      flex: 1;
-      text-align: center;
-      margin-left: -10px;
-    }
-
-    /* Ajuste do header */
-    .site-header {
-      background: rgba(0, 0, 0, 0.85);
-      padding: 0.5rem 1rem;
-    }
-
-    /* Seções */
-    .aura-section,
-    .localizacao-section,
-    .sobre-section {
-      padding: 3rem 1rem;
-    }
-
-    /* Hero atualizado */
-    .hero {
-      width: 100%;
-      height: 100vh;
-      /* ocupa toda a altura da tela */
-      position: relative;
-      /* referência para a imagem de fundo e conteúdo */
-      overflow: hidden;
-      /* esconde possíveis excessos da imagem */
-    }
-
-    .hero-bg {
-      position: absolute;
-      /* encosta no topo e ocupa todo o container */
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      /* substitua pelo seu caminho */
-      background-size: cover;
-      /* cobre todo o container */
-      background-position: center top;
-      /* topo da imagem sempre visível */
-      background-repeat: no-repeat;
-      z-index: 0;
-      /* atrás do conteúdo */
-    }
-
-    .hero-title {
-      position: relative;
-      z-index: 1;
-      /* acima da imagem de fundo */
-      font-size: 3.0rem;
-      letter-spacing: 0.4rem;
-      margin-top: 1.5rem;
-      margin-bottom: 1rem;
-      text-align: center;
-      color: #F5F5F5;
-      -webkit-text-stroke: 1px;
-    }
-
-    /* Hero line */
-    .hero-line {
-      display: none;
-    }
-
-    /* FAQ */
-    .faq-content {
-      column-count: 1;
-      gap: 1.5rem;
-      padding: 0 1rem;
-    }
-
-    /* Contatos */
-    .contatos-card {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      margin-right: 0;
-    }
+  .nav-center {
+    letter-spacing: 0.2rem;
   }
+
+  /* Hero */
+  .hero-title {
+    font-size: 4rem;
+    letter-spacing: 0.8rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    -webkit-text-stroke: 1.5px;
+  }
+
+  /* Gap entre seções */
+  .aura-section,
+  .localizacao-section,
+  .sobre-section {
+    padding: 5rem 1rem;
+  }
+
+  /* Contatos */
+  .contatos-card {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-right: auto;
+  }
+
+  /* FAQ colunas */
+  .faq-content {
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+
+  .faq-item:nth-last-child(2),
+  .faq-item:last-child {
+    margin-bottom: 0;
+    /* remove o espaçamento apenas no mobile */
+  }
+
+  .footer-spacer {
+    height: 4rem;
+    /* controla o espaço entre FAQ e footer */
+  }
+
+}
+
+/* ===================== MOBILE ===================== */
+@media (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
+
+  .aura-title {
+    font-size: 2.5rem;
+    /* ~40px */
+    -webkit-text-stroke: 1.5px;
+    /* opcional */
+    letter-spacing: 0.25rem;
+  }
+
+  .hero-icon-card {
+    top: 162px;
+    margin-left: -173px;
+  }
+
+  .hero-icon {
+    width: 40px;
+    height: auto;
+  }
+
+  .consulta-btn {
+    font-size: 1rem;
+    /* ~16px */
+    padding: 1rem 1rem;
+    text-decoration-thickness: 2px;
+    width: 100%;
+    /* ocupa toda a largura */
+    text-align: center;
+    display: inline-block;
+  }
+
+  .foto {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
+  .localizacao-title {
+    font-size: 2.5rem;
+    /* ~40px */
+    -webkit-text-stroke: 1.5px;
+    letter-spacing: 0.25rem;
+  }
+
+  .localizacao-card {
+    margin-top: -1.4rem;
+  }
+
+  .contatos-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 auto;
+    margin-top: 4.2rem;
+  }
+
+  .contatos-items>div {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contatos-items div:last-child {
+    justify-self: center;
+    margin-right: 0;
+  }
+
+  .faq-content {
+    display: none;
+    /* esconde a versão desktop */
+  }
+
+  .faq-content-mobile {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* 1 coluna mobile */
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+
+  .faq-content-mobile h3 {
+    font-size: 1.50rem;
+    /* ajuste conforme desejar */
+    line-height: 1.4;
+    /* opcional: melhora legibilidade */
+  }
+
+  .faq-item:nth-last-child(2),
+  .faq-item:last-child {
+    margin-bottom: 0;
+    /* remove o espaçamento apenas no mobile */
+  }
+
+  /* ==== HAMBURGUER ==== */
+  .hamburger {
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2000;
+  }
+
+  .hamburger.active {
+    color: #000;
+  }
+
+  /* MENU */
+  .nav {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-left .nav-list,
+  .nav-right {
+    display: none;
+  }
+
+  .nav-left .nav-list.active {
+    display: block;
+    position: absolute;
+    top: 17px;
+    /* aparece logo abaixo do header */
+    left: 0;
+    right: 0;
+    background: rgba(248, 248, 240);
+    padding: 1.5rem 0;
+    text-align: center;
+    z-index: 1500;
+  }
+
+  .nav-right.active {
+    display: flex;
+    flex-direction: row;
+    /* horizontal */
+    justify-content: center;
+    /* centraliza os itens horizontalmente */
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    /* encosta no topo da nav-right */
+    top: 0;
+    /* ⬅ nav-list encosta no topo da nav-right */
+    left: 0;
+    right: 0;
+    gap: 1rem;
+    /* espaçamento entre os links */
+    background: #f8f8f0;
+    z-index: 1500;
+  }
+
+  .nav-left .nav-list.active a,
+  .nav-right.active a {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    color: #666666;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  /* Opcional: efeito hover */
+  .nav-left .nav-list.active a:hover,
+  .nav-right.active a:hover {
+    color: #000000;
+    /* ainda mais forte ao passar o mouse */
+  }
+
+  /* Centralizar o AURA */
+  .nav-center {
+    position: relative;
+    transform: none;
+    flex: 1;
+    text-align: center;
+    margin-left: -10px;
+  }
+
+  /* Ajuste do header */
+  .site-header {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 0.5rem 1rem;
+  }
+
+  /* Seções */
+  .aura-section,
+  .localizacao-section,
+  .sobre-section {
+    padding: 3rem 1rem;
+  }
+
+  /* Hero atualizado */
+  .hero {
+    width: 100%;
+    height: 100vh;
+    /* ocupa toda a altura da tela */
+    position: relative;
+    /* referência para a imagem de fundo e conteúdo */
+    overflow: hidden;
+    /* esconde possíveis excessos da imagem */
+  }
+
+  .hero-bg {
+    position: absolute;
+    /* encosta no topo e ocupa todo o container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* substitua pelo seu caminho */
+    background-size: cover;
+    /* cobre todo o container */
+    background-position: center top;
+    /* topo da imagem sempre visível */
+    background-repeat: no-repeat;
+    z-index: 0;
+    /* atrás do conteúdo */
+  }
+
+  .hero-content {
+    top: -160px;
+  }
+
+  .hero-title {
+    position: relative;
+    z-index: 1;
+    /* acima da imagem de fundo */
+    font-size: 3.0rem;
+    letter-spacing: 0.4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #F5F5F5;
+    -webkit-text-stroke: 1px;
+  }
+
+  /* Hero line */
+  .hero-line {
+    display: none;
+  }
+
+  /* FAQ */
+  .faq-content {
+    column-count: 1;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  /* Contatos */
+  .contatos-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-right: 0;
+  }
+}
