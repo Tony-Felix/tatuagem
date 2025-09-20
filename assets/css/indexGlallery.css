@@ -96,6 +96,16 @@ body {
   overflow: hidden;
 }
 
+.hero-icon {
+  position: absolute;
+  top: -200%;             /* controla quão pra cima */
+  left: 50%;            /* centraliza horizontalmente */
+  transform: translateX(-50%); /* ajusta o centro certinho */
+  width: 60px;         /* aumenta o tamanho */
+  height: auto;
+  z-index: 0;           /* fica atrás se precisar */
+}
+
 .hero-bg {
   position: absolute;
   top: 0;
