@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="assets/css/indexGlallery.css">
   <link rel="stylesheet" href="assets/css/gallery.css">
+  <link rel="stylesheet" href="assets/css/carrossel.css">
 
   <!-- FONTES -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@100;300;400;500;700&display=swap"
@@ -44,7 +45,7 @@
     </section>
 
     <!-- GALERIA DE IMAGENS -->
-    <section class="galeria-section" id="galeria">
+    <section class="galeria-section galeria-ajustes" id="galeria">
       <div class="galeria-grid">
         <div class="galeria-item">
           <img src="assets/gallery/card1.jpg" alt="Imagem 1" onerror="this.style.visibility='hidden'">
@@ -77,10 +78,48 @@
     <div class="lightbox" id="lightbox">
       <span class="close-btn" id="closeBtn">&times;</span>
       <img class="lightbox-img" id="lightboxImg" src="" alt="">
-      <span class="arrow left" id="prevArrow">&#10094;</span>
-      <span class="arrow right" id="nextArrow">&#10095;</span>
+      <span class="arrow-lightbox lightbox-left" id="prevArrowLight">&#10094;</span>
+      <span class="arrow-lightbox lightbox-right" id="nextArrowLight">&#10095;</span>
     </div>
 
+    <section>
+      <div class="iniciarConversaGaleria">
+        <a href="https://wa.me/5521979881897" target="_blank" class="galleryBtn">
+          ENTRE EM CONTATO
+        </a>
+      </div>
+    </section>
+
+    <!-- CARROSSEL -->
+    <section class="carrossel">
+      <div class="carrossel-track">
+        <figure class="carrossel-item">
+          <img src="assets/gallery/5.webp" alt="Imagem 1" loading="lazy" />
+        </figure>
+        <figure class="carrossel-item">
+          <img src="assets/gallery/IMG_0248.webp" alt="Imagem 2" loading="lazy" />
+        </figure>
+        <figure class="carrossel-item">
+          <img src="assets/gallery/IMG_0483.webp" alt="Imagem 3" loading="lazy" />
+        </figure>
+        <figure class="carrossel-item">
+          <img src="assets/gallery/IMG_0488.webp" alt="Imagem 4" loading="lazy" />
+        </figure>
+        <figure class="carrossel-item">
+          <img src="assets/gallery/IMG_2802.webp" alt="Imagem 5" loading="lazy" />
+        </figure>
+        <figure class="carrossel-item">
+          <img src="assets/gallery/IMG_8125.webp" alt="Imagem 6" loading="lazy" />
+        </figure>
+      </div>
+
+      <span class="arrow left" id="prevArrow" role="button" aria-label="Anterior">&#10094;</span>
+      <span class="arrow right" id="nextArrow" role="button" aria-label="Próximo">&#10095;</span>
+
+      <div class="carrossel-controls">
+        <button id="toggleDirection"></button>
+      </div>
+    </section>
   </main>
 
   <!-- CONTATOS -->
@@ -135,6 +174,8 @@
   <!-- LIGHTBOX -->
   <script src="assets/js/lightBox.js"></script>
 
+  <!-- CARROSSEL -->
+  <script src="assets/js/carrossel.js"></script>
 </body>
 
 </html>

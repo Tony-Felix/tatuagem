@@ -1,0 +1,132 @@
+.carrossel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh; 
+  position: relative;
+  --widthItem: 450px;
+  --heightItem: 350px;
+  width: var(--widthItem);
+  height: var(--heightItem);
+  perspective: 1000px;
+  margin: 0 auto;
+  margin-bottom: 12rem;
+}
+
+.carrossel-track {
+  --rotatey: 0;
+  position: relative;
+  transform: rotateY(var(--rotatey));
+  transform-style: preserve-3d;
+  user-select: none;
+  cursor: grab;
+  will-change: transform;
+  margin-left: -1rem;
+}
+
+.carrossel-item {
+  opacity: 0.7;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s;
+  overflow: hidden;
+  transform: rotateY(var(--rotatey)) translateZ(var(--tz)) translateZ(0);
+}
+
+.carrossel-item.active {
+  opacity: 1;
+  z-index: 10;
+}
+
+.carrossel-track,
+.carrossel-item {
+  width: 90%;
+  height: 90%;
+}
+
+.carrossel-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-user-drag: none;
+}
+
+/* ===========================
+   controles do carrossel
+=========================== */
+.carrossel-controls {
+  margin-top: 37.5em;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  transition: box-shadow 0.4s ease;
+  overflow: hidden;
+}
+
+#toggleDirection {
+  background-color: #151515;
+  width: 150px;
+  height: 50px;
+  border: none;
+  background-image: url('../images/botaogirarfundotransparente.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.carrossel-controls::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, #00fffc, transparent);
+  transition: transform 0.6s;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.carrossel-controls.active-forward::before {
+  transform: translateX(-100%);
+}
+
+.carrossel-controls.active-backward::before {
+  transform: translateX(100%);
+}
+
+.carrossel-controls:hover {
+  box-shadow: 0 0 20px 5px #00fffc;
+}
+
+/* SETAS DO CARROSSEL */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  color: #ffffffed;
+  cursor: pointer;
+  user-select: none;
+  padding: 0.5rem;
+  animation: jumpForward 0.6s ease-out forwards;
+  display: none;
+}
+
+.arrow.left {
+  left: -30rem;
+}
+
+.arrow.right {
+  right: -30rem;
+}
+
+.arrow:hover {
+  transform: scale(1.2) translateY(-25px);
+}

@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const gallery = document.querySelectorAll('.galeria-item img');
   const lightboxImg = document.getElementById('lightboxImg');
   const closeBtn = document.getElementById('closeBtn');
-  const prevArrow = document.getElementById('prevArrow');
-  const nextArrow = document.getElementById('nextArrow');
+  const prevArrow = document.getElementById('prevArrowLight');
+  const nextArrow = document.getElementById('nextArrowLight');
 
   let currentIndex = 0;
   let arrowTimeout;
