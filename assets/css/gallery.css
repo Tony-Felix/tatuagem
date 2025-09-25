@@ -12,9 +12,9 @@ body.galeria-page {
 /* ===================== MENU ===================== */
 body.galeria-page .nav {
   position: relative;
-  width: 100%;
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 1.25rem 3.125rem; /* antes 20px 50px */
   background: rgba(0,0,0,0.35);
   border-bottom: 1px solid rgba(255,255,255,0.03);
@@ -22,20 +22,15 @@ body.galeria-page .nav {
 }
 
 body.galeria-page .nav-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-weight: 700;
-  letter-spacing: 0.25rem; /* antes 4px */
-  color: #fff;
+  display: inline-block;
+  margin-left: 0px;
 }
 
 body.galeria-page .nav-center a {
   color: #fff;
   text-decoration: none;
-  font-weight: 700;
-  letter-spacing: 0.25rem; /* antes 4px */
   transition: text-shadow 0.8s ease;
+  letter-spacing: 0.25rem;
 }
 
 body.galeria-page .nav-center a:hover {
@@ -59,8 +54,9 @@ body.galeria-page .nav-center a:hover {
 
 /* ===================== TÍTULO / TONY FÉLIX ===================== */
 body.galeria-page .hero {
-  flex-direction: column; /* empilha conteúdo */
-  align-items: center;    /* centraliza tudo */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   gap: 0;                 /* antes 0px */
   text-align: center;
 }
@@ -98,9 +94,11 @@ body.galeria-page .hero-title {
 }
 
 .iniciarConversaGaleria {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   margin-top: 5rem;
   margin-bottom: 8rem;
+  margin-left: -4px;
 }
 
 

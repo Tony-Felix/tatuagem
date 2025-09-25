@@ -1,7 +1,6 @@
 .carrossel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   min-height: 50vh; 
   position: relative;
   --widthItem: 450px;
@@ -10,7 +9,7 @@
   height: var(--heightItem);
   perspective: 1000px;
   margin: 0 auto;
-  margin-bottom: 12rem;
+  margin-bottom: 9rem;
 }
 
 .carrossel-track {
@@ -32,7 +31,7 @@
   align-items: center;
   transition: opacity 0.5s;
   overflow: hidden;
-  transform: rotateY(var(--rotatey)) translateZ(var(--tz)) translateZ(0);
+  transform: rotateY(var(--rotatey)) translateZ(var(--tz));
 }
 
 .carrossel-item.active {
@@ -64,6 +63,7 @@
   position: absolute;
   transition: box-shadow 0.4s ease;
   overflow: hidden;
+  margin-left: -5px;
 }
 
 #toggleDirection {
@@ -71,7 +71,7 @@
   width: 150px;
   height: 50px;
   border: none;
-  background-image: url('../images/botaogirarfundotransparente.png');
+  background-image: url('../icons/girar.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
