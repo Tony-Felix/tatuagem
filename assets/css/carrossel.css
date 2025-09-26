@@ -67,16 +67,20 @@
 }
 
 #toggleDirection {
-  background-color: #151515;
   width: 150px;
-  height: 50px;
   border: none;
-  background-image: url('../icons/girar.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   cursor: pointer;
   outline: none;
+  display: flex;
+  justify-content: center;
+  color: floralwhite;
+  background: none;
+}
+
+#toggleDirection svg {
+  width: 50px;
+  height: 50px;
+  display: block;
 }
 
 .carrossel-controls::before {
