@@ -10,17 +10,21 @@
   perspective: 1000px;
   margin: 0 auto;
   margin-bottom: 9rem;
+  overflow: visible;
 }
 
 .carrossel-track {
+  width: 90%;
+  height: 90%;
   --rotatey: 0;
   position: relative;
-  transform: rotateY(var(--rotatey));
   transform-style: preserve-3d;
   user-select: none;
   cursor: grab;
   will-change: transform;
-  margin-left: -1rem;
+  margin-left: 0;
+  transform-origin: center center;
+  transform: rotateY(var(--rotatey));
 }
 
 .carrossel-item {
@@ -32,6 +36,9 @@
   transition: opacity 0.5s;
   overflow: hidden;
   transform: rotateY(var(--rotatey)) translateZ(var(--tz));
+  width: 100%;
+  height: 100%;
+  clip-path: inset(0% 5% 0% 5%);
 }
 
 .carrossel-item.active {
@@ -39,16 +46,10 @@
   z-index: 10;
 }
 
-.carrossel-track,
-.carrossel-item {
-  width: 90%;
-  height: 90%;
-}
-
 .carrossel-item img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   object-fit: cover;
   -webkit-user-drag: none;
 }
@@ -112,7 +113,7 @@
 /* SETAS DO CARROSSEL */
 .arrow {
   position: absolute;
-  top: 50%;
+  top: 227%;
   transform: translateY(-50%);
   font-size: 1.8rem;
   color: #ffffffed;
@@ -124,11 +125,11 @@
 }
 
 .arrow.left {
-  left: -30rem;
+  left: 0.5rem;
 }
 
 .arrow.right {
-  right: -30rem;
+  right: 0.5rem;
 }
 
 .arrow:hover {
