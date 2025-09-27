@@ -162,6 +162,19 @@
   -webkit-text-stroke: 3.5px;
 }
 
+.endereco {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  color: #C2C2C2;
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-bottom: -5rem;
+}
+
 .map-wrap {
   max-width: 60.4rem;
   height: 30rem;
