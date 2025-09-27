@@ -28,6 +28,11 @@
     height: auto;
   }
 
+  .hero-bg {
+    width: 100%;
+    height: 130%;
+  }
+
   .consulta-btn {
     font-size: 1.25rem;
     /* ~20px */
@@ -89,7 +94,7 @@
   .hero-title {
     font-size: 4rem;
     letter-spacing: 0.8rem;
-    margin-top: 5rem;
+    margin-top: 2.3rem;
     margin-bottom: 2rem;
     -webkit-text-stroke: 1.5px;
   }
@@ -142,8 +147,8 @@
   }
 
   .hero-icon-card {
-    top: 162px;
-    margin-left: -173px;
+    top: 122px;
+    margin-left: -156px;
   }
 
   .hero-icon {
@@ -321,22 +326,9 @@
     padding: 3rem 1rem;
   }
 
-  /* Hero atualizado */
-  .hero {
-    width: 100%;
-    height: 100vh;
-    /* ocupa toda a altura da tela */
-    position: relative;
-    /* referência para a imagem de fundo e conteúdo */
-    overflow: hidden;
-    /* esconde possíveis excessos da imagem */
-  }
-
   .hero-bg {
     position: absolute;
     /* encosta no topo e ocupa todo o container */
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     /* substitua pelo seu caminho */
@@ -346,7 +338,6 @@
     /* topo da imagem sempre visível */
     background-repeat: no-repeat;
     z-index: 0;
-    /* atrás do conteúdo */
   }
 
   .hero-content {
@@ -357,7 +348,7 @@
     position: relative;
     z-index: 1;
     /* acima da imagem de fundo */
-    font-size: 3.0rem;
+    font-size: 2.5rem;
     letter-spacing: 0.4rem;
     margin-top: 1.5rem;
     margin-bottom: 1rem;

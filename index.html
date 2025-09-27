@@ -23,6 +23,10 @@
 
 <body class="home">
   <svg style="display:none;">
+    <symbol id="icon-favorite" viewBox="0 0 300 300">
+      <path fill="currentColor"
+        d="M133.5 32.15v32.2l-58.6-.25c-32.25-.15-62.3.05-66.75.45l-8.15.7v36.05l26.75-.75c14.7-.4 44.85-.9 67-1.15l40.25-.35.2 27.7c.1 15.25.05 38.55-.15 51.8l-.3 24.05 5.7 16.45c6.15 17.7 6.9 23.05 9.1 61.55 1 18.1 2 16.7 3.35-4.8 2.35-37.45 2.6-39 8.65-56.8l5.55-16.25-.15-29.65c-.15-16.25-.15-39.65-.1-51.95l.15-22.3 62.25.3c34.25.2 64.4 0 67-.45l4.75-.8V64l-8.25-.1c-4.55-.05-34.75 0-67.15.1l-58.95.2.6-30.85c.3-16.95.35-31.4.05-32.1C165.95.3 161.65 0 149.65 0h-16.2l.05 32.15z" />
+    </symbol>
 
     <symbol id="icon-girar" viewBox="0 0 300 300">
       <path fill="currentColor"
@@ -63,11 +67,21 @@
   <main>
     <!-- HERO -->
     <section id="home" class="hero" aria-label="Seção principal">
-      <div class="hero-bg" aria-hidden="true"></div>
+      <div aria-hidden="true">
+        <picture>
+          <source media="(min-width:769px)" srcset="assets/images/hero-1920.webp" type="image/webp">
+          <source media="(min-width:481px)" srcset="assets/images/hero-1200.webp" type="image/webp">
+          <source media="(max-width:480px)" srcset="assets/images/hero-768.webp" type="image/webp">
+          <!-- fallback JPEG -->
+          <img class="hero-bg" src="assets/images/hero-1248.png" alt="Banner principal do site">
+        </picture>
+      </div>
 
       <div class="hero-content">
         <div class="hero-icon-card">
-          <img class="hero-icon" src="assets/icons/favicon.svg" alt="marca">
+          <svg class="hero-icon" alt="marca da página">
+            <use href="#icon-favorite"></use>
+          </svg>
         </div>
         <h1 class="hero-title">ONY FÉLIX TATTOO</h1>
       </div>
