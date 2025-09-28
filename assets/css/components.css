@@ -133,6 +133,16 @@
   color: #e0e0e0;
 }
 
+/* =========== IA TITLE ============ */
+#ia-title {
+  font-family: 'Weight Sans Serif', sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: 0.2rem;
+  -webkit-text-stroke: 1px;
+  
+}
+
+
 /* ========================================
    LOCALIZAÇÃO
 ======================================== */
@@ -149,6 +159,7 @@
   padding: 6.875rem 0;
   text-align: center;
   margin-bottom: 6.125rem;
+  margin-top: -2.5rem;
 }
 
 .localizacao-title {
