@@ -43,14 +43,6 @@ body {
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Weight Sans Serif';
-  src: url('/assets/fonts/weight-sans-serif/') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
 /* ===============================
    HEADER
 =============================== */
@@ -274,6 +266,16 @@ body {
 .contatos-items .icon:hover {
   transform: scale(1.2);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+address {
+  font-style: normal;
+  font-family: 'Space Mono', monospace;
+  margin-top: 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #D6D6D6;
+  margin-bottom: 2rem;
 }
 
 .email,

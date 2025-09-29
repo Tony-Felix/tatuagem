@@ -134,12 +134,9 @@
 }
 
 /* =========== IA TITLE ============ */
-#ia-title {
-  font-family: 'Weight Sans Serif', sans-serif;
-  font-size: 3.5rem;
-  letter-spacing: 0.2rem;
-  -webkit-text-stroke: 1px;
-  
+
+.quebra {
+  display: block;
 }
 
 
@@ -174,6 +171,7 @@
 }
 
 .endereco {
+  font-style: normal;
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 400;
   color: #C2C2C2;
@@ -201,6 +199,11 @@
   height: 100%;
   border: 0;
   display: block;
+}
+
+figcaption {
+  position: absolute;
+  left: -9999px; /* fora da tela, mas acessível */
 }
 
 #local {

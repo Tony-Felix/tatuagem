@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tony Félix Tattoo</title>
+  <title>Tony Félix Tatuador | Estúdio de Tatuagem no Rio de Janeiro</title>
+  <meta name="description"
+    content="Tony Félix Tatuador — Estúdio de tatuagem no Rio de Janeiro. Conheça o método A.U.R.A. e descubra sua tatuagem ideal com arte, tecnologia e inspiração.">
 
   <!-- CSS principal -->
   <link rel="stylesheet" href="assets/css/headerMain.css">
@@ -15,7 +17,7 @@
 
 
   <!-- Fontes -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
@@ -40,13 +42,13 @@
   </svg>
 
   <header class="site-header">
-    <nav class="nav">
+    <nav class="nav" role="navigation" aria-label="Menu principal">
       <div class="nav-left">
-        <button class="hamburger">☰</button>
+        <button class="hamburger" aria-label="Abrir menu de navegação">☰</button>
         <ul class="nav-list">
-          <li><a href="#home">HOME</a></li>
+          <li><a href="#home" aria-current="page">HOME</a></li>
           <li><a href="#galeria">GALERIA</a></li>
-          <li><a href="https://wa.me/5521979881897" target="_blank">AGENDAMENTO</a></li>
+          <li><a href="https://wa.me/5521979881897" target="_blank" rel="noopener noreferrer">AGENDAMENTO</a></li>
         </ul>
       </div>
 
@@ -66,20 +68,18 @@
 
   <main>
     <!-- HERO -->
-    <section id="home" class="hero" aria-label="Seção principal">
-      <div aria-hidden="true">
-        <picture>
-          <source media="(min-width:769px)" srcset="assets/images/hero-1920.webp" type="image/webp">
-          <source media="(min-width:481px)" srcset="assets/images/hero-1200.webp" type="image/webp">
-          <source media="(max-width:480px)" srcset="assets/images/hero-768.webp" type="image/webp">
-          <!-- fallback JPEG -->
-          <img class="hero-bg" src="assets/images/hero-1248.png" alt="Banner principal do site">
-        </picture>
-      </div>
+    <section id="home" class="hero" aria-label="Seção principal de destaque">
+      <picture>
+        <source media="(min-width:769px)" srcset="assets/images/hero-1920.webp" type="image/webp">
+        <source media="(min-width:481px)" srcset="assets/images/hero-1200.webp" type="image/webp">
+        <source media="(max-width:480px)" srcset="assets/images/hero-768.webp" type="image/webp">
+        <!-- fallback JPEG -->
+        <img class="hero-bg" src="assets/images/hero-1248.png" alt="Banner principal do site">
+      </picture>
 
       <div class="hero-content">
-        <div class="hero-icon-card">
-          <svg class="hero-icon" alt="marca da página">
+        <div class="hero-icon-card" aria-hidden="true">
+          <svg class="hero-icon">
             <use href="#icon-favorite"></use>
           </svg>
         </div>
@@ -96,23 +96,21 @@
       </div>
 
       <div class="consulta-wrap">
-        <a href="https://wa.me/5521979881897" target="_blank" class="consulta-btn">
+        <a href="https://wa.me/5521979881897" target="_blank" rel="noopener noreferrer" class="consulta-btn">
           INICIAR CONVERSA
         </a>
       </div>
     </section>
 
-    <!-- SOBRE / FOTO E FORMAÇÃO -->
+    <!-- SOBRE -->
     <section id="sobre" class="sobre-section">
       <div class="sobre-inner">
-        <div class="foto">
-          <!-- substitua o src pela sua foto -->
-          <img src="assets/images/minhaFoto.jpeg" alt="Foto de Tony Félix" />
-        </div>
+        <figure class="foto">
+          <img src="assets/images/minhaFoto.jpeg" alt="Retrato de Tony Félix" loading="lazy" />
+        </figure>
         <div class="formacao">
           <h3>TONY FÉLIX</h3>
           <p>
-            <!-- coloque aqui uma descrição rápida da sua formação -->
             Formado pela Universidade Federal do Estado do Rio de Janeiro (UNIRIO) e na área de TI, Tony Félix cria um
             elo entre as artes e a tecnologia contemporânea.
 
@@ -122,7 +120,8 @@
             imaginação e um refinamento meticuloso e exaustivo para transformar visões abstratas em tatuagens únicas.
 
             Mais do que um estilo, o A.U.R.A. é uma assinatura artística que conecta arte, espiritualidade e tecnologia.
-            <a href="https://wa.me/5521979881897" target="_blank" class="saiba-mais">Saiba mais</a>
+            <a href="https://wa.me/5521979881897" target="_blank" rel="noopener noreferrer" class="saiba-mais">Saiba
+              mais</a>
           </p>
         </div>
       </div>
@@ -130,7 +129,7 @@
 
     <!-- GALERIA -->
     <section class="aura-section">
-      <div id="aura" class="aura-card">
+      <div class="aura-card">
         <h2 class="aura-title">GALERIA</h2>
         <p id="galeria" class="aura-sub">Clique e veja a galeria exclusiva!</p>
         <p class="aura-sub">Imagens temporárias apenas para demonstração. Novas fotos próprias serão adicionadas em
@@ -146,57 +145,73 @@
 
     <section class="galeria-section ajuste-imgagens">
       <div class="galeria-grid">
-        <div class="galeria-item">
-          <img src="assets/gallery/card9.webp" alt="Imagem 1" onerror="this.style.visibility='hidden'">
-        </div>
-        <div class="galeria-item">
-          <img src="assets/gallery/card10.webp" alt="Imagem 2" onerror="this.style.visibility='hidden'">
-        </div>
-        <div class="galeria-item">
-          <img src="assets/gallery/card11.webp" alt="Imagem 3" onerror="this.style.visibility='hidden'">
-        </div>
-        <div class="galeria-item">
-          <img src="assets/gallery/card12.webp" alt="Imagem 4" onerror="this.style.visibility='hidden'">
-        </div>
+
+        <figure class="galeria-item">
+          <img src="assets/gallery/card9.webp"
+            alt="Gato em aquarela com pelagem rosa, roxa e azul, olhos azuis brilhantes — arte colorida e abstrata para inspiração em tatuagem.">
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="assets/gallery/card10.webp"
+            alt="Tatuagem de raposa em aquarela e estilo geométrico no antebraço, com pelagem laranja e vermelha e olhos azuis.">
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="assets/gallery/card11.webp"
+            alt="Tatuagem de lobo em aquarela no antebraço, com pelagem rosa, roxa e azul e olhos azuis, cercada por floresta de pinheiros e flores.">
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="assets/gallery/card12.webp"
+            alt="Tatuagem floral em preto e cinza na coxa e quadril, com rosas realistas e folhagens em cascata — arte delicada e inspiradora para tatuagem.">
+        </figure>
+
       </div>
     </section>
 
+
     <!-- ASSISTENTE VIRTUAL -->
-    <section class="aura-section">
-      <div id="aura" class="aura-card">
-        <h2 class="aura-title" id="ia-title">TATI <br> INTELIGÊNCIA :: ARTIFICIAL</h2>
-        <p id="galeria" class="aura-sub">Fale com a Tati e descubra sua tatuagem ideal</p>
+    <section class="aura-section" aria-labelledby="ia-title">
+      <div class="aura-card">
+        <h2 class="aura-title">TATI <span class="quebra"> INTELIGÊNCIA ARTIFICIAL</h2>
+        <p class="aura-sub">Fale com a Tati e descubra sua tatuagem ideal</p>
       </div>
 
       <div class="consulta-wrap">
-        <a href="https://chatgpt.com/c/68d9c54a-5a50-8333-aafe-4d27f52971e9" class="consulta-btn">
+        <a href="https://chatgpt.com/c/68d9c54a-5a50-8333-aafe-4d27f52971e9" class="consulta-btn"
+          aria-label="Falar com Tati e descobrir sua tatuagem ideal">
           DESCOBRIR TATUAGEM
         </a>
       </div>
     </section>
 
     <!-- LOCALIZAÇÃO -->
-    <section class="localizacao-section">
+    <section class="localizacao-section" aria-labelledby="localizacao-title">
       <div class="localizacao-card">
-        <h2 class="localizacao-title">LOCALIZAÇÃO</h2>
+        <h2 class="localizacao-title" id="localizacao-title">LOCALIZAÇÃO</h2>
       </div>
 
-      <div class="map-wrap">
-        <div id="local"></div>
+      <figure class="map-wrap">
+        <span id="local"></span>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dXXXXXXXXXX!2d-43.XXXXXX!3d-22.XXXXXX!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x...ADDRESS_ID...!2sAv.%20Isabel%2029,%20Santa%20Cruz,%20Rio%20de%20Janeiro!5e0!3m2!1spt-BR!2sbr!4vxxxxxxxxxxxxx"
           width="100%" height="100%" style="border:0; filter: grayscale(100%) contrast(70%);" allowfullscreen=""
-          loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa com a localização: Av. Isabel, 29 - Santa Cruz, Rio de Janeiro">
         </iframe>
-      </div>
-      <div class="endereco">
-        <p>Av. Isabel, 29 - Santa Cruz</p>
-      </div>
+        <figcaption>
+          Mapa da localização: Av. Isabel, 29 - Santa Cruz, Rio de Janeiro
+        </figcaption>
+      </figure>
+
+      <address class="endereco">
+        Av. Isabel, 29 - Santa Cruz
+      </address>
     </section>
 
     <!-- CONTATOS -->
-    <section class="aura-section">
-      <div id="contatos" class="aura-card" aria-hidden="true">
+    <section class="aura-section" aria-labelledby="contato">
+      <div class="aura-card">
         <h2 id="contato" class="aura-title">CONTATOS</h2>
         <p class="aura-sub">Entre em contato e agende sua sessão</p>
       </div>
@@ -204,10 +219,10 @@
       <div class="faq-item contatos-items">
         <div>
           <h3>Local</h3>
-          <p>
-            Av. Isabel 29 - Santa Cruz <br>
+          <address>
+            Av. Isabel 29 - Santa Cruz<br>
             Rio de Janeiro - RJ 23510-151
-          </p>
+          </address>
           <h3>Horários</h3>
           <p>9H ÁS 22H | Segunda - Sábado</p>
         </div>
@@ -220,7 +235,8 @@
             <span class="email">toni.felix.tattoo@gmail.com</span>
           </p>
           <p>
-            <a href="https://wa.me/5521979881897" target="_blank" class="contato-link">WHATSAPP</a>
+            <a href="https://wa.me/5521979881897" target="_blank" rel="noopener noreferrer"
+              class="contato-link">WHATSAPP</a>
             <br>
             21 97988-1897
           </p>
@@ -228,8 +244,9 @@
 
         <div>
           <h3>Seguir</h3>
-          <a href="https://www.instagram.com/tonyfelixtatuador/" target="_blank" class="contato-link">
-            <svg class="icon">
+          <a href="https://www.instagram.com/tonyfelixtatuador/" rel="noopener noreferrer" target="_blank"
+            aria-label="Siga no Instagram" class="contato-link">
+            <svg class="icon" aria-hidden="true">
               <use href="#icon-instagram"></use>
             </svg>
           </a>
