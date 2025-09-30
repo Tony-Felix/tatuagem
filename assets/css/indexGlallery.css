@@ -270,9 +270,9 @@ body {
 
 address {
   font-style: normal;
-  font-family: 'Space Mono', monospace;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   margin-top: 2rem;
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.6;
   color: #D6D6D6;
   margin-bottom: 2rem;
@@ -301,7 +301,7 @@ address {
   padding: 0 2.5rem;
 }
 
-.faq-item h3 {
+.faq-item dt {
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 400;
   font-size: 1.875rem;
@@ -312,7 +312,7 @@ address {
   margin-bottom: 1.25rem;
 }
 
-.faq-item p {
+.faq-item dd {
   font-family: 'Space Mono', monospace;
   font-size: 1rem;
   line-height: 1.6;
@@ -347,4 +347,13 @@ address {
   text-align: center;
   color: #bbb;
   border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.dev-link {
+  color: inherit;
+  /* herda a cor do footer */
+}
+
+.dev-link:hover {
+  text-decoration: none;
 }
