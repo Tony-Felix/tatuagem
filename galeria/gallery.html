@@ -4,13 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galeria - Tony Félix</title>
+  <title>Galeria de Tatuagens | Portfólio Tony Félix</title>
+  <meta name="description" content="Portfólio de Tony Félix - Galeria de tatuagens realistas, geométricas e autorais.">
 
-  <link rel="stylesheet" href="assets/css/indexGlallery.css">
-  <link rel="stylesheet" href="assets/css/gallery.css">
-  <link rel="stylesheet" href="assets/css/carrossel.css">
+  <link rel="stylesheet" href="../assets/css/baseReset.css">
+  <link rel="preload" href="../assets/css/indexGlallery.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="../assets/css/galleryCarrossel.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
 
-  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@100;300;400;500;700&display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
@@ -32,7 +35,7 @@
   <header class="site-header">
     <nav class="nav">
       <div class="nav-center">
-        <a href="index.html">HOME</a>
+        <a href="../index.html">HOME</a>
       </div>
     </nav>
   </header>
@@ -44,7 +47,6 @@
       </div>
     </section>
 
-    <!-- TITLE / TONY FÉLIX -->
     <section class="hero" id="home">
       <h1 class="hero-title">TONY FÉLIX</h1>
 
@@ -59,28 +61,28 @@
     <section class="galeria-section galeria-ajustes" id="galeria">
       <div class="galeria-grid">
         <div class="galeria-item">
-          <img src="assets/gallery/card1.jpg" alt="Imagem 1" onerror="this.style.visibility='hidden'">
+          <img src="../assets/gallery/card1.jpg" alt="Imagem 1" onerror="this.style.visibility='hidden'">
         </div>
         <div class="galeria-item">
-          <img src="assets/gallery/card2.jpg" alt="Imagem 2" onerror="this.style.visibility='hidden'">
+          <img src="../assets/gallery/card2.jpg" alt="Imagem 2" onerror="this.style.visibility='hidden'">
         </div>
         <div class="galeria-item">
-          <img src="assets/gallery/card3.jpg" alt="Imagem 3" onerror="this.style.visibility='hidden'">
+          <img src="../assets/gallery/card3.jpg" alt="Imagem 3" onerror="this.style.visibility='hidden'">
         </div>
         <div class="galeria-item">
-          <img src="assets/gallery/card4.jpg" alt="Imagem 4" onerror="this.style.visibility='hidden'">
+          <img src="../assets/gallery/card4.jpg" alt="Imagem 4" onerror="this.style.visibility='hidden'">
         </div>
         <div class="galeria-item">
-          <img src="assets/gallery/card5.jpg" alt="Imagem 5" onerror="this.style.visibility='hidden'">
+          <img src="../assets/gallery/card5.jpg" alt="Imagem 5" onerror="this.style.visibility='hidden'">
         </div>
         <div class="galeria-item">
-          <img src="assets/gallery/card6.jpg" alt="Imagem 6" onerror="this.style.visibility='hidden'">
+          <img src="../assets/gallery/card6.jpg" alt="Imagem 6" onerror="this.style.visibility='hidden'">
         </div>
         <div class="galeria-item">
-          <img src="assets/gallery/card7.jpg" alt="Imagem 7" onerror="this.style.visibility='hidden'">
+          <img src="../assets/gallery/card7.jpg" alt="Imagem 7" onerror="this.style.visibility='hidden'">
         </div>
         <div class="galeria-item">
-          <img src="assets/gallery/card8.jpg" alt="Imagem 8" onerror="this.style.visibility='hidden'">
+          <img src="../assets/gallery/card8.jpg" alt="Imagem 8" onerror="this.style.visibility='hidden'">
         </div>
       </div>
     </section>
@@ -105,31 +107,31 @@
     <section class="carrossel">
       <div class="carrossel-track">
         <figure class="carrossel-item">
-          <img src="assets/gallery/5.webp" alt="Imagem 1" loading="lazy" />
+          <img src="../assets/gallery/5.webp" alt="Imagem 1" loading="lazy" />
         </figure>
         <figure class="carrossel-item">
-          <img src="assets/gallery/card9.webp" alt="Imagem 2" loading="lazy" />
+          <img src="../assets/gallery/card9.webp" alt="Imagem 2" loading="lazy" />
         </figure>
         <figure class="carrossel-item">
-          <img src="assets/gallery/card10.webp" alt="Imagem 3" loading="lazy" />
+          <img src="../assets/gallery/card10.webp" alt="Imagem 3" loading="lazy" />
         </figure>
         <figure class="carrossel-item">
-          <img src="assets/gallery/card11.webp" alt="Imagem 4" loading="lazy" />
+          <img src="../assets/gallery/card11.webp" alt="Imagem 4" loading="lazy" />
         </figure>
         <figure class="carrossel-item">
-          <img src="assets/gallery/card12.webp" alt="Imagem 5" loading="lazy" />
+          <img src="../assets/gallery/card12.webp" alt="Imagem 5" loading="lazy" />
         </figure>
         <figure class="carrossel-item">
-          <img src="assets/gallery/cad13.webp" alt="Imagem 6" loading="lazy" />
+          <img src="../assets/gallery/cad13.webp" alt="Imagem 6" loading="lazy" />
         </figure>
       </div>
 
       <div class="carrossel-controls">
         <button id="toggleDirection" aria-label="Inverter direção">
-        <svg>
-          <use href="#icon-girar"></use>
-        </svg>
-      </button>
+          <svg>
+            <use href="#icon-girar"></use>
+          </svg>
+        </button>
       </div>
     </section>
 
@@ -172,7 +174,9 @@
       <div>
         <h3>Seguir</h3>
         <a href="https://www.instagram.com/tonyfelixtatuador/" target="_blank" class="contato-link">
-          <svg class="icon" alt="Instagram"><use href="#icon-instagram"></use></svg>
+          <svg class="icon" alt="Instagram">
+            <use href="#icon-instagram"></use>
+          </svg>
         </a>
       </div>
     </div>
@@ -184,13 +188,13 @@
   </footer>
 
   <!-- HAMBURGUER -->
-  <script src="assets/js/menuHamburguer.js"></script>
+  <script src="../assets/js/menuHamburguer.js" defer></script>
 
   <!-- LIGHTBOX -->
-  <script src="assets/js/lightBox.js"></script>
+  <script src="../assets/js/lightBox.js" defer></script>
 
   <!-- CARROSSEL -->
-  <script src="assets/js/carrossel.js"></script>
+  <script src="../assets/js/carrossel.js" defer></script>
 </body>
 
 </html>

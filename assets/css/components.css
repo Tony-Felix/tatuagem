@@ -11,19 +11,6 @@
   background: #fff;
 }
 
-.hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 130%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  will-change: transform;
-  transform: translateY(0);
-}
-
 /* ========================================
   BOTÃO INICIAR CONVERSA
 ======================================== */
