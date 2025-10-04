@@ -5,6 +5,7 @@
 }
 
 html {
+  background: #151515;
   height: 100%;
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
