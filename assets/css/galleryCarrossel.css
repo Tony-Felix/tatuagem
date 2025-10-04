@@ -1,14 +1,3 @@
-/* ===================== GALERIA PAGE ===================== */
-body.galeria-page {
-  background: #151515;
-  color: #eee;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: 1.4;
-  height: 100%;
-}
-
 /* ===================== MENU ===================== */
 body.galeria-page .nav {
   position: relative;
