@@ -8,7 +8,7 @@
   <meta name="description" content="Portfólio de Tony Félix - Galeria de tatuagens realistas, geométricas e autorais.">
 
   <link rel="stylesheet" href="../assets/css/baseReset.css">
-  <link rel="preload" href="../assets/css/indexGlallery.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="../assets/css/indexGlallery.css">
   <link rel="preload" href="../assets/css/galleryCarrossel.css" as="style"
     onload="this.onload=null;this.rel='stylesheet'">
   <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
@@ -140,19 +140,19 @@
   </main>
 
   <!-- CONTATOS -->
-  <section class="aura-section">
-    <div id="contatos" class="aura-card" aria-hidden="true">
-      <h2 id="contato" class="aura-title">C O N T A T O S</h2>
+  <section class="aura-section" aria-labelledby="contato">
+    <div class="aura-card">
+      <h2 id="contato" class="aura-title">CONTATOS</h2>
       <p class="aura-sub">Entre em contato e agende sua sessão</p>
     </div>
 
     <div class="faq-item contatos-items">
       <div>
         <h3>Local</h3>
-        <p>
-          Av. Isabel 29 - Santa Cruz <br>
+        <address>
+          Av. Isabel 29 - Santa Cruz<br>
           Rio de Janeiro - RJ 23510-151
-        </p>
+        </address>
         <h3>Horários</h3>
         <p>9H ÁS 22H | Segunda - Sábado</p>
       </div>
@@ -165,7 +165,8 @@
           <span class="email">toni.felix.tattoo@gmail.com</span>
         </p>
         <p>
-          <a href="https://wa.me/5521979881897" target="_blank" class="contato-link">WHATSAPP</a>
+          <a href="https://wa.me/5521979881897" target="_blank" rel="noopener noreferrer"
+            class="contato-link">WHATSAPP</a>
           <br>
           21 97988-1897
         </p>
@@ -173,8 +174,9 @@
 
       <div>
         <h3>Seguir</h3>
-        <a href="https://www.instagram.com/tonyfelixtatuador/" target="_blank" class="contato-link">
-          <svg class="icon" alt="Instagram">
+        <a href="https://www.instagram.com/tonyfelixtatuador/" rel="noopener noreferrer" target="_blank"
+          aria-label="Siga no Instagram" class="contato-link">
+          <svg class="icon" aria-hidden="true">
             <use href="#icon-instagram"></use>
           </svg>
         </a>
