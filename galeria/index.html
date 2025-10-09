@@ -64,30 +64,30 @@
     <!-- GALERIA DE IMAGENS -->
     <section class="galeria-section galeria-ajustes" id="galeria">
       <div class="galeria-grid">
-        <div class="galeria-item">
-          <img src="../assets/gallery/card1.jpg" alt="Imagem 1" onerror="this.style.visibility='hidden'">
-        </div>
-        <div class="galeria-item">
-          <img src="../assets/gallery/card2.jpg" alt="Imagem 2" onerror="this.style.visibility='hidden'">
-        </div>
-        <div class="galeria-item">
-          <img src="../assets/gallery/card3.jpg" alt="Imagem 3" onerror="this.style.visibility='hidden'">
-        </div>
-        <div class="galeria-item">
-          <img src="../assets/gallery/card4.jpg" alt="Imagem 4" onerror="this.style.visibility='hidden'">
-        </div>
-        <div class="galeria-item">
-          <img src="../assets/gallery/card5.jpg" alt="Imagem 5" onerror="this.style.visibility='hidden'">
-        </div>
-        <div class="galeria-item">
-          <img src="../assets/gallery/card6.jpg" alt="Imagem 6" onerror="this.style.visibility='hidden'">
-        </div>
-        <div class="galeria-item">
-          <img src="../assets/gallery/card7.jpg" alt="Imagem 7" onerror="this.style.visibility='hidden'">
-        </div>
-        <div class="galeria-item">
-          <img src="../assets/gallery/card8.jpg" alt="Imagem 8" onerror="this.style.visibility='hidden'">
-        </div>
+        <figure class="galeria-item">
+          <img src="../assets/gallery/card1.jpg" alt="tatuagem floral sendo feita no braço por um tatuador" onerror="this.style.visibility='hidden'">
+        </figure>
+        <figure class="galeria-item">
+          <img src="../assets/gallery/card2.jpg" alt="Penas de homem totalmente tatuadas com os temas: flores e espaço." onerror="this.style.visibility='hidden'">
+        </figure>
+        <figure class="galeria-item">
+          <img src="../assets/gallery/card3.jpg" alt="Tatuador fazendo um traço em uma tatuagem onde um homem tem rabo de cobra." onerror="this.style.visibility='hidden'">
+        </figure>
+        <figure class="galeria-item">
+          <img src="../assets/gallery/card4.jpg" alt="Tatuando braço de sujeito com formas geométricas." onerror="this.style.visibility='hidden'">
+        </figure>
+        <figure class="galeria-item">
+          <img src="../assets/gallery/card5.jpg" alt="Braço tatuado com um rosto de um japonês e um dragão." onerror="this.style.visibility='hidden'">
+        </figure>
+        <figure class="galeria-item">
+          <img src="../assets/gallery/card6.jpg" alt="riva sentada na cadeira com os braços tatuados estilo floral." onerror="this.style.visibility='hidden'">
+        </figure>
+        <figure class="galeria-item">
+          <img src="../assets/gallery/card7.jpg" alt="mulher tapando os olhos e mostrando diversas tatuagens pequenas em preto e cinza." onerror="this.style.visibility='hidden'">
+        </figure>
+        <figure class="galeria-item">
+          <img src="../assets/gallery/card8.jpg" alt="mulher de braço cruzado mostrando tatuagem floral delicada." onerror="this.style.visibility='hidden'">
+        </figure>
       </div>
     </section>
 
@@ -131,8 +131,8 @@
       </div>
 
       <div class="carrossel-controls">
-        <button id="toggleDirection" aria-label="Inverter direção">
-          <svg>
+        <button id="toggleDirection" aria-label="Inverter ou retomar rotação do carrossel" aria-pressed="true">
+          <svg aria-hidden="true">
             <use href="#icon-girar"></use>
           </svg>
         </button>
@@ -141,52 +141,52 @@
 
     <span class="arrow left" id="prevArrow" role="button" aria-label="Anterior">&#10094;</span>
     <span class="arrow right" id="nextArrow" role="button" aria-label="Próximo">&#10095;</span>
+
+    <!-- CONTATOS -->
+    <section class="aura-section" aria-labelledby="contato">
+      <div class="aura-card">
+        <h2 id="contato" class="aura-title">CONTATOS</h2>
+        <p class="aura-sub">Entre em contato e agende sua sessão</p>
+      </div>
+
+      <div class="faq-item contatos-items">
+        <div>
+          <h3>Local</h3>
+          <address>
+            Av. Isabel 29 - Santa Cruz<br>
+            Rio de Janeiro - RJ 23510-151
+          </address>
+          <h3>Horários</h3>
+          <p>9H ÁS 22H | Segunda - Sábado</p>
+        </div>
+
+        <div>
+          <h3>Mensagens</h3>
+          <p>
+            <a href="mailto:toni.felix.tattoo@gmail.com" class="contato-link">EMAIL</a>
+            <br>
+            <span class="email">toni.felix.tattoo@gmail.com</span>
+          </p>
+          <p>
+            <a href="https://wa.me/5521979881897" target="_blank" rel="noopener noreferrer"
+              class="contato-link">WHATSAPP</a>
+            <br>
+            21 97988-1897
+          </p>
+        </div>
+
+        <div>
+          <h3>Seguir</h3>
+          <a href="https://www.instagram.com/tonyfelixtatuador/" rel="noopener noreferrer" target="_blank"
+            aria-label="Siga no Instagram" class="contato-link">
+            <svg class="icon" aria-hidden="true">
+              <use href="#icon-instagram"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
-
-  <!-- CONTATOS -->
-  <section class="aura-section" aria-labelledby="contato">
-    <div class="aura-card">
-      <h2 id="contato" class="aura-title">CONTATOS</h2>
-      <p class="aura-sub">Entre em contato e agende sua sessão</p>
-    </div>
-
-    <div class="faq-item contatos-items">
-      <div>
-        <h3>Local</h3>
-        <address>
-          Av. Isabel 29 - Santa Cruz<br>
-          Rio de Janeiro - RJ 23510-151
-        </address>
-        <h3>Horários</h3>
-        <p>9H ÁS 22H | Segunda - Sábado</p>
-      </div>
-
-      <div>
-        <h3>Mensagens</h3>
-        <p>
-          <a href="mailto:toni.felix.tattoo@gmail.com" class="contato-link">EMAIL</a>
-          <br>
-          <span class="email">toni.felix.tattoo@gmail.com</span>
-        </p>
-        <p>
-          <a href="https://wa.me/5521979881897" target="_blank" rel="noopener noreferrer"
-            class="contato-link">WHATSAPP</a>
-          <br>
-          21 97988-1897
-        </p>
-      </div>
-
-      <div>
-        <h3>Seguir</h3>
-        <a href="https://www.instagram.com/tonyfelixtatuador/" rel="noopener noreferrer" target="_blank"
-          aria-label="Siga no Instagram" class="contato-link">
-          <svg class="icon" aria-hidden="true">
-            <use href="#icon-instagram"></use>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
 
   <!-- FOOTER -->
   <footer class="site-footer">

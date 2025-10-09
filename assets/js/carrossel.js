@@ -1,7 +1,7 @@
-let isAutoRotating = true; // controla rotação automática
-let autoSpeed = 0.2;       // velocidade de giro, positiva ou negativa
+let isAutoRotating = true;
+let autoSpeed = 0.2;
 
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   const carrossel = document.querySelector(".carrossel-track"); // antigo: .carrossel
   const items = [...document.querySelectorAll(".carrossel-item")];
   const btn = document.getElementById("toggleDirection");
@@ -148,11 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
       autoSpeed = -autoSpeed;
 
       if (controlsDiv) {
-        if (autoSpeed > 0) {
-          controlsDiv.classList.add("active-forward");
-        } else {
-          controlsDiv.classList.add("active-backward");
-        }
+        controlsDiv.classList.add(autoSpeed > 0 ? "active-forward" : "active-backward");
       }
 
       // APLICA ROTAÇÃO
