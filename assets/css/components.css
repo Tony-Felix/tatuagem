@@ -239,7 +239,7 @@
 
 figcaption {
   position: absolute;
-  left: -9999px; /* fora da tela, mas acessível */
+  left: -9999px;
 }
 
 #local {

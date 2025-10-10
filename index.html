@@ -4,25 +4,65 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self' 'nonce-abc123';
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+  font-src 'self' https://fonts.gstatic.com;
+  img-src 'self' data:;
+  connect-src 'self';
+  object-src 'none';
+  frame-src https://www.google.com;
+  base-uri 'self';
+  form-action 'none';
+">
+
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
   <title>Tony Félix Tatuador | Estúdio de Tatuagem no Rio de Janeiro</title>
   <meta name="description"
     content="Tony Félix Tatuador — Estúdio de tatuagem no Rio de Janeiro. Conheça o método A.U.R.A. e descubra sua tatuagem ideal com arte, tecnologia e inspiração.">
-
   <link rel="canonical" href="https://tony-felix.github.io/tatuagem/" />
 
-  <!-- CSS principal -->
-  <link rel="stylesheet" href="assets/css/baseReset.css">
-  <link rel="preload" href="assets/css/headerMain.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="assets/css/indexGlallery.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="assets/css/components.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="assets/css/responsive.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      background: #151515;
+      height: 100%;
+      scroll-behavior: smooth;
+      scroll-padding-top: 5rem;
+      font-size: 16px;
+    }
+
+    body {
+      height: 100%;
+      background: #151515;
+      color: #eee;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.4;
+    }
+  </style>
+
+  <link rel="stylesheet" href="assets/css/headerMain.css">
+  <link rel="stylesheet" href="assets/css/indexGlallery.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
 
-  <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@300;400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
 <body class="home">
@@ -134,7 +174,8 @@
       <div class="aura-card">
         <h2 class="aura-title">GALERIA</h2>
         <p id="galeria" class="aura-sub">Clique e veja a galeria exclusiva!</p>
-        <p class="aura-sub">Imagens temporárias apenas para demonstração. Novas fotos próprias serão adicionadas em breve.</p>
+        <p class="aura-sub">Imagens temporárias apenas para demonstração. Novas fotos próprias serão adicionadas em
+          breve.</p>
       </div>
 
       <div class="consulta-wrap">
@@ -346,7 +387,7 @@
   </footer>
 
   <!-- PARALLAX -->
-  <script>
+  <script nonce="abc123">
     if (window.innerWidth > 768) {
       const script = document.createElement('script');
       script.src = 'assets/js/heroParallax.js';
