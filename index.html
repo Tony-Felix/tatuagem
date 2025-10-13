@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="Content-Security-Policy" content="
   default-src 'self';
-  script-src 'self' 'nonce-abc123';
+  script-src 'self';
   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
   font-src 'self' https://fonts.gstatic.com;
   img-src 'self' data:;
@@ -27,36 +27,9 @@
     content="Tony Félix Tatuador — Estúdio de tatuagem no Rio de Janeiro. Conheça o método A.U.R.A. e descubra sua tatuagem ideal com arte, tecnologia e inspiração.">
   <link rel="canonical" href="https://tony-felix.github.io/tatuagem/" />
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      background: #151515;
-      height: 100%;
-      scroll-behavior: smooth;
-      scroll-padding-top: 5rem;
-      font-size: 16px;
-    }
-
-    body {
-      height: 100%;
-      background: #151515;
-      color: #eee;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      line-height: 1.4;
-    }
-  </style>
-
   <link rel="stylesheet" href="assets/css/headerMain.css">
-  <link rel="stylesheet" href="assets/css/indexGlallery.css">
-  <link rel="stylesheet" href="assets/css/components.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/componentesResponsivo.css">
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -237,7 +210,7 @@
         <span id="local"></span>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dXXXXXXXXXX!2d-43.XXXXXX!3d-22.XXXXXX!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x...ADDRESS_ID...!2sAv.%20Isabel%2029,%20Santa%20Cruz,%20Rio%20de%20Janeiro!5e0!3m2!1spt-BR!2sbr!4vxxxxxxxxxxxxx"
-          width="100%" height="100%" style="border:0; filter: grayscale(100%) contrast(70%);" allowfullscreen=""
+          allowfullscreen=""
           loading="lazy" referrerpolicy="no-referrer-when-downgrade"
           title="Mapa com a localização: Av. Isabel, 29 - Santa Cruz, Rio de Janeiro">
         </iframe>
@@ -387,17 +360,10 @@
   </footer>
 
   <!-- PARALLAX -->
-  <script nonce="abc123">
-    if (window.innerWidth > 768) {
-      const script = document.createElement('script');
-      script.src = 'assets/js/heroParallax.js';
-      script.async = true;
-      document.body.appendChild(script);
-    }
-  </script>
+  <script src="assets/js/loadParallax.js" defer></script>
 
   <!-- HAMBURGUER -->
-  <script src="assets/js/menuHamburguer.js"></script>
+  <script src="assets/js/menuHamburguer.js" defer></script>
 
 </body>
 
