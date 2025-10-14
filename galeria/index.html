@@ -111,42 +111,43 @@
         aria-label="Próxima imagem">&#10095;</span>
     </section>
 
-    <section class="iniciarConversaGaleria">
+    <section class="iniciarConversaGaleria" id="entreEmContato">
       <a href="https://wa.me/5521979881897" target="_blank" rel="noopener noreferrer" class="galleryBtn">
         ENTRE EM CONTATO
       </a>
     </section>
 
     <!-- CARROSSEL -->
-    <section class="carrossel">
-      <div class="carrossel-track">
-        <figure class="carrossel-item">
-          <img src="../assets/gallery/5.webp" alt="Imagem 1" loading="lazy" />
-        </figure>
-        <figure class="carrossel-item">
-          <img src="../assets/gallery/card9.webp" alt="Imagem 2" loading="lazy" />
-        </figure>
-        <figure class="carrossel-item">
-          <img src="../assets/gallery/card10.webp" alt="Imagem 3" loading="lazy" />
-        </figure>
-        <figure class="carrossel-item">
-          <img src="../assets/gallery/card11.webp" alt="Imagem 4" loading="lazy" />
-        </figure>
-        <figure class="carrossel-item">
-          <img src="../assets/gallery/card12.webp" alt="Imagem 5" loading="lazy" />
-        </figure>
-        <figure class="carrossel-item">
-          <img src="../assets/gallery/card13.webp" alt="Imagem 6" loading="lazy" />
-        </figure>
-      </div>
+    <template id="carrosselTemplate">
+      <section class="carrossel">
+        <div class="carrossel-track">
+          <figure class="carrossel-item">
+            <img src="../assets/gallery/5.webp" alt="Imagem 1" loading="lazy" />
+          </figure>
+          <figure class="carrossel-item">
+            <img src="../assets/gallery/card9.webp" alt="Imagem 2" loading="lazy" />
+          </figure>
+          <figure class="carrossel-item">
+            <img src="../assets/gallery/card10.webp" alt="Imagem 3" loading="lazy" />
+          </figure>
+          <figure class="carrossel-item">
+            <img src="../assets/gallery/card11.webp" alt="Imagem 4" loading="lazy" />
+          </figure>
+          <figure class="carrossel-item">
+            <img src="../assets/gallery/card12.webp" alt="Imagem 5" loading="lazy" />
+          </figure>
+          <figure class="carrossel-item">
+            <img src="../assets/gallery/card13.webp" alt="Imagem 6" loading="lazy" />
+          </figure>
+        </div>
 
-      <div class="carrossel-controls">
-        <button id="toggleDirection" aria-label="Inverter ou retomar rotação do carrossel" aria-pressed="true">
-          <img src="../assets/icons/icon-girar.svg" alt="Girar">
-        </button>
-      </div>
-    </section>
-
+        <div class="carrossel-controls">
+          <button id="toggleDirection" aria-label="Inverter ou retomar rotação do carrossel" aria-pressed="true">
+            <img src="../assets/icons/icon-girar.svg" alt="Girar">
+          </button>
+        </div>
+      </section>
+    </template>
     <span class="arrow left" id="prevArrow" role="button" aria-label="Anterior">&#10094;</span>
     <span class="arrow right" id="nextArrow" role="button" aria-label="Próximo">&#10095;</span>
 

@@ -2,7 +2,25 @@ let isAutoRotating = true;
 let autoSpeed = 0.2;
 
 window.addEventListener("load", () => {
-  const carrossel = document.querySelector(".carrossel-track"); // antigo: .carrossel
+  if (window.innerWidth < 768) {
+    return;
+  }
+
+  // ===========================
+  // INJETANDO O TEMPLATE
+  // ===========================
+  const iniciarSection = document.getElementById("entreEmContato");
+  const template = document.getElementById("carrosselTemplate");
+
+  if (iniciarSection && template) {
+    const section = template.content.querySelector("section");
+    iniciarSection.insertAdjacentElement("afterend", section);
+  }
+
+  // ===========================
+  // SELEÇÃO DE ELEMENTOS DO CARROSSEL
+  // ===========================
+  const carrossel = document.querySelector(".carrossel-track");
   const items = [...document.querySelectorAll(".carrossel-item")];
   const btn = document.getElementById("toggleDirection");
   const controlsDiv = document.querySelector(".carrossel-controls");
@@ -14,6 +32,7 @@ window.addEventListener("load", () => {
   let rotateY = 0;
   let startX;
   let isDragging = false;
+  let hasMoved = false;
 
   // =============  CRIA O CARROSSEL ================
   function createCarrossel() {
@@ -31,10 +50,10 @@ window.addEventListener("load", () => {
     });
   }
 
-  // ROTAÇÃO AUTOMATICA
+  // ROTAÇÃO AUTOMÁTICA
   function autoRotate() {
     if (isAutoRotating && !isDragging) {
-      rotateY -= autoSpeed; // usa autoSpeed para permitir inverter direção
+      rotateY -= autoSpeed;
       carrossel.style.setProperty("--rotatey", `${rotateY}deg`);
     }
     requestAnimationFrame(autoRotate);
@@ -52,7 +71,7 @@ window.addEventListener("load", () => {
   function onMouseMove(e) {
     if (!isDragging) return;
     const delta = e.clientX - startX;
-    rotateY += delta * 0.3; // sensibilidade
+    rotateY += delta * 0.3;
     carrossel.style.setProperty("--rotatey", `${rotateY}deg`);
     startX = e.clientX;
     hasMoved = true;
@@ -66,7 +85,6 @@ window.addEventListener("load", () => {
 
     if (!hasMoved) return;
 
-    // centraliza item mais próximo
     const total = items.length;
     const anglePerItem = 360 / total;
 
@@ -97,7 +115,6 @@ window.addEventListener("load", () => {
   items.forEach((item, i) => {
     item.addEventListener("click", () => {
       isAutoRotating = false;
-
       items.forEach(it => it.classList.remove("active"));
 
       const total = items.length;
@@ -128,7 +145,7 @@ window.addEventListener("load", () => {
     });
   });
 
-  // =============== BOTÃO PARA INVERTER DIREÇÃO OU INICIAR GIRO ================
+  // BOTÃO DE INVERSÃO
   if (controlsDiv) {
     if (autoSpeed < 0) {
       controlsDiv.classList.add("active-backward");
@@ -144,20 +161,18 @@ window.addEventListener("load", () => {
       if (prevArrow) prevArrow.style.display = "none";
       if (nextArrow) nextArrow.style.display = "none";
 
-      // Inverte direção do carrossel
       autoSpeed = -autoSpeed;
 
       if (controlsDiv) {
         controlsDiv.classList.add(autoSpeed > 0 ? "active-forward" : "active-backward");
       }
 
-      // APLICA ROTAÇÃO
       items.forEach(it => it.classList.remove("active"));
       if (!isAutoRotating) isAutoRotating = true;
     });
   }
 
-  // ================== CRIA SETAS DO CARROSSEL ====================
+  // SETAS
   function resetArrowTimeout() {
     clearTimeout(arrowTimeout);
     arrowTimeout = setTimeout(() => {
@@ -166,12 +181,10 @@ window.addEventListener("load", () => {
     }, 3000);
   }
 
-  // Evento para mostrar/ocultar setas com base na posição do mouse
   document.addEventListener("mousemove", function mouseMoveArrow(e) {
     if (!arrowsActive) return;
 
-    const mid = window.innerWidth / 2; // metade da tela
-
+    const mid = window.innerWidth / 2;
     if (e.clientX < mid) {
       if (prevArrow) prevArrow.style.display = "block";
       if (nextArrow) nextArrow.style.display = "none";
@@ -183,22 +196,17 @@ window.addEventListener("load", () => {
     resetArrowTimeout();
   });
 
-  // Clique nas laterais da tela
   document.addEventListener("click", (e) => {
     if (!arrowsActive) return;
-
-    // se o clique for dentro do carrossel, ignora
     if (carrossel.contains(e.target)) return;
 
     const mid = window.innerWidth / 2;
     const currentIndex = items.findIndex(it => it.classList.contains("active"));
 
     if (e.clientX < mid) {
-      // lado esquerdo → próxima imagem
       const newIndex = (currentIndex + 1) % items.length;
       items[newIndex].click();
     } else {
-      // lado direito → imagem anterior
       const newIndex = (currentIndex - 1 + items.length) % items.length;
       items[newIndex].click();
     }
@@ -206,15 +214,13 @@ window.addEventListener("load", () => {
     resetArrowTimeout();
   });
 
-
-  // ============================== EVENTOS ============================
+  // EVENTOS
   if (carrossel) carrossel.addEventListener("mousedown", onMouseDown);
   window.addEventListener("mousemove", onMouseMove);
   window.addEventListener("mouseup", onMouseUp);
 
-  // inicialização
+  // INICIALIZAÇÃO
   createCarrossel();
   autoRotate();
-
   window.addEventListener("resize", createCarrossel);
 });

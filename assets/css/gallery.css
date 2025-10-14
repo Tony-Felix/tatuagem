@@ -81,9 +81,10 @@ body.galeria-page .nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.25rem 3.125rem; /* antes 20px 50px */
-  background: rgba(0,0,0,0.35);
-  border-bottom: 1px solid rgba(255,255,255,0.03);
+  padding: 1.25rem 3.125rem;
+  /* antes 20px 50px */
+  background: rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
   z-index: 40;
 }
 
@@ -101,21 +102,23 @@ body.galeria-page .nav-center a {
 
 body.galeria-page .nav-center a:hover {
   text-shadow: 0 0 8px rgba(168, 85, 247, 0.8),
-               0 0 16px rgba(168, 85, 247, 0.6),
-               0 0 24px rgba(168, 85, 247, 0.4);
+    0 0 16px rgba(168, 85, 247, 0.6),
+    0 0 24px rgba(168, 85, 247, 0.4);
 }
 
 /* ===================== AURA TOPO ===================== */
 .aura-top {
   position: relative;
-  height: 6.25rem; /* antes 100px */
+  height: 6.25rem;
+  /* antes 100px */
 }
 
 .aura-top .nav-center {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 100%; /* manter igual, relativo à altura */
+  top: 100%;
+  /* manter igual, relativo à altura */
 }
 
 /* ===================== TÍTULO / TONY FÉLIX ===================== */
@@ -123,27 +126,34 @@ body.galeria-page .hero {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 0;                 /* antes 0px */
+  gap: 0;
+  /* antes 0px */
   text-align: center;
 }
 
 body.galeria-page .hero-title {
-  margin: 0;            /* remove margem antiga */
-  padding-top: 1.875rem; /* antes 30px */
-  margin-bottom: 3.125rem; /* antes 50px */
+  margin: 0;
+  /* remove margem antiga */
+  padding-top: 1.875rem;
+  /* antes 30px */
+  margin-bottom: 3.125rem;
+  /* antes 50px */
 }
 
 /* ===================== INICIAR CONVERSA GALLERY ===================== */
 .galleryBtn {
-  margin-top: 3.125rem; /* antes 50px */
+  margin-top: 3.125rem;
+  /* antes 50px */
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 400;
-  font-size: 1.3125rem; /* antes 21px */
+  font-size: 1.3125rem;
+  /* antes 21px */
   background-color: #151515;
   color: #ffffff;
   border: 2px solid #ffffff;
   border-radius: 0;
-  padding: 0.6875rem 2.25rem; /* antes 11px 36px */
+  padding: 0.6875rem 2.25rem;
+  /* antes 11px 36px */
   cursor: pointer;
   text-decoration: underline;
   text-decoration-thickness: 2px;
@@ -217,9 +227,11 @@ body.galeria-page .hero-title {
 
 /* ===================== LIGHTBOX ===================== */
 .lightbox {
-  display: none; /* escondido por padrão */
+  display: none;
+  /* escondido por padrão */
   position: fixed;
-  inset: 0; /* top, right, bottom, left = 0 */
+  inset: 0;
+  /* top, right, bottom, left = 0 */
   background: rgba(0, 0, 0, 0.9);
   justify-content: center;
   align-items: center;
@@ -236,15 +248,19 @@ body.galeria-page .hero-title {
   max-width: 90%;
   max-height: 90%;
   object-fit: contain;
-  box-shadow: 0 0 1.25rem rgba(0,0,0,0.5); /* antes 20px */
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.5);
+  /* antes 20px */
 }
 
 /* Botão fechar (X) */
 .close-btn {
   position: absolute;
-  top: 1.25rem;      /* antes 20px */
-  right: 1.875rem;   /* antes 30px */
-  font-size: 2.1875rem; /* antes 35px */
+  top: 1.25rem;
+  /* antes 20px */
+  right: 1.875rem;
+  /* antes 30px */
+  font-size: 2.1875rem;
+  /* antes 35px */
   color: #ffffffed;
   cursor: pointer;
   user-select: none;
@@ -255,30 +271,35 @@ body.galeria-page .hero-title {
 .arrow-lightbox {
   position: absolute;
   top: 50%;
-  font-size: 1.25rem; /* antes 20px */
-  font-weight: 20; 
+  font-size: 1.25rem;
+  /* antes 20px */
+  font-weight: 20;
   color: #ffffffed;
   cursor: pointer;
   user-select: none;
-  display: none; /* só aparecem via JS */
+  display: none;
+  /* só aparecem via JS */
   transform: translateY(-50%);
-  padding: 0.625rem;  /* antes 10px */
-  background: rgba(0,0,0,0.3);
+  padding: 0.625rem;
+  /* antes 10px */
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
 }
 
 /* seta esquerda */
 .arrow-lightbox.lightbox-left {
-  left: 1.25rem; /* antes 20px */
+  left: 1.25rem;
+  /* antes 20px */
 }
 
 /* seta direita */
 .arrow-lightbox.lightbox-right {
-  right: 1.25rem; /* antes 20px */
+  right: 1.25rem;
+  /* antes 20px */
 }
 
 .arrow-lightbox:hover {
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .galeria-item img {
@@ -295,7 +316,7 @@ body.galeria-page .hero-title {
 .carrossel {
   display: grid;
   place-items: center;
-  min-height: 50vh; 
+  min-height: 50vh;
   position: relative;
   --widthItem: 450px;
   --heightItem: 350px;
@@ -432,6 +453,10 @@ body.galeria-page .hero-title {
 
 /* ===================== MOBILE — GALERIA ===================== */
 @media (max-width: 767px) {
+  .carrossel {
+    display: none;
+  }
+
   /* BOTÕES */
   .galleryBtn {
     font-size: 1rem;
