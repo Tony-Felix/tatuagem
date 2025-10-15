@@ -316,15 +316,13 @@ body.galeria-page .hero-title {
 .carrossel {
   display: grid;
   place-items: center;
-  min-height: 50vh;
   position: relative;
-  --widthItem: 450px;
-  --heightItem: 350px;
+  --widthItem: clamp(250px, 60vw, 450px);
+  --heightItem: clamp(200px, 45vw, 350px);
   width: var(--widthItem);
   height: var(--heightItem);
   perspective: 1000px;
-  margin: 0 auto;
-  margin-bottom: 9rem;
+  margin: 0 auto 9rem auto;
   overflow: visible;
 }
 
@@ -397,6 +395,10 @@ body.galeria-page .hero-title {
   width: 52px;
   height: 52px;
   display: block;
+  -webkit-user-drag: none; /* Chrome, Safari */
+  -webkit-user-select: none; /* Chrome, Safari */
+  user-select: none;         /* padrão */
+  pointer-events: none;
 }
 
 .carrossel-controls::before {
@@ -437,6 +439,10 @@ body.galeria-page .hero-title {
   padding: 0.5rem;
   animation: jumpForward 0.6s ease-out forwards;
   display: none;
+  -webkit-user-drag: none; /* Chrome, Safari */
+  -webkit-user-select: none; /* Chrome, Safari */
+  user-select: none;         /* padrão */
+  pointer-events: none;
 }
 
 .arrow.left {

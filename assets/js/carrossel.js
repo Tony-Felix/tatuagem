@@ -38,10 +38,10 @@ window.addEventListener("load", () => {
   function createCarrossel() {
     const total = items.length;
     const angle = 360 / total;
-    const tz = Math.round(
-      (parseInt(getComputedStyle(carrossel).width) / 2) /
-      Math.tan(Math.PI / total)
-    );
+
+    const carouselEl = document.querySelector('.carrossel');
+    const carouselWidth = carouselEl ? carouselEl.offsetWidth : 450;
+    const tz = Math.round((carouselWidth / 2) / Math.tan(Math.PI / total) * 0.95);
 
     items.forEach((item, i) => {
       const degrees = angle * i;
@@ -222,9 +222,14 @@ window.addEventListener("load", () => {
   // INICIALIZAÇÃO
   createCarrossel();
   autoRotate();
+
   let resizeTimeout;
   window.addEventListener("resize", () => {
     clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(createCarrossel, 200);
+    resizeTimeout = setTimeout(() => {
+      requestAnimationFrame(() => {
+        createCarrossel();
+      });
+    }, 200);
   });
 });

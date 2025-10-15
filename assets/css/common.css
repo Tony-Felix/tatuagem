@@ -14,9 +14,7 @@
   font-display: swap;
 }
 
-/* ===============================
-   AURA
-=============================== */
+/* ===================== AURA ===================== */
 .aura-section {
   display: flex;
   flex-direction: column;
@@ -59,9 +57,7 @@
   margin-left: 15px;
 }
 
-/* ===============================
-   CONTATOS
-=============================== */
+/* ===================== CONTATOS ===================== */
 .contatos-items {
   max-width: 60.4rem;
   margin: 0 auto;
@@ -126,9 +122,7 @@ address {
   color: #bfbfbf;
 }
 
-/* ===============================
-   FAQ
-=============================== */
+/* ===================== FAQ ===================== */
 .faq-content {
   column-count: 2;
   gap: 3.75rem;
@@ -175,9 +169,7 @@ address {
   margin-top: 0%;
 }
 
-/* ========================================
-   FOOTER
-======================================== */
+/* ===================== FOOTER ===================== */
 .site-footer {
   padding: 1.25rem;
   text-align: center;
@@ -192,4 +184,74 @@ address {
 
 .dev-link:hover {
   text-decoration: none;
+}
+
+/* ===================== TABLET ===================== */
+@media (max-width: 1023px) {
+  .aura-section {
+    padding: 5rem 1rem;
+  }
+
+  .contatos-items {
+    margin-left: 60px;
+  }
+
+  .faq-content {
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+
+  .faq-item:nth-last-child(2),
+  .faq-item:last-child {
+    margin-bottom: 0;
+  }
+
+}
+
+/* ===================== MOBA ===================== */
+@media (max-width: 767px) {
+  .aura-section {
+    padding: 3rem 1rem;
+  }
+
+  .contatos-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 auto;
+    margin-top: 4.2rem;
+  }
+
+  .contatos-items>div {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contatos-items div:last-child {
+    justify-self: center;
+    margin-right: 0;
+  }
+
+  .faq-content {
+    display: none;
+  }
+
+  .faq-content-mobile {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+
+  .faq-content-mobile h3 {
+    font-size: 1.50rem;
+    line-height: 1.4;
+  }
+
+  .faq-item:nth-last-child(2),
+  .faq-item:last-child {
+    margin-bottom: 0;
+  }
+
 }
