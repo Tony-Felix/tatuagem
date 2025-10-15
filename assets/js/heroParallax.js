@@ -1,4 +1,6 @@
-(function () {
+(() => {
+  if (window.innerWidth <= 767) return;
+
   const hero = document.querySelector('.hero');
   const heroBg = document.querySelector('.hero-bg');
   if (!hero || !heroBg) return;
@@ -12,12 +14,6 @@
   }
 
   function update() {
-    // desativa parallax no mobile
-    if (window.innerWidth <= 767) {
-      heroBg.style.transform = 'translateY(0)';
-      return;
-    }
-
     const start = hero.offsetTop;
     const scrollY = window.scrollY || window.pageYOffset;
     let progress = (scrollY - start) / heroHeight;
