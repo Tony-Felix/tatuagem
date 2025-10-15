@@ -317,8 +317,8 @@ body.galeria-page .hero-title {
   display: grid;
   place-items: center;
   position: relative;
-  --widthItem: clamp(250px, 60vw, 450px);
-  --heightItem: clamp(200px, 45vw, 350px);
+  --widthItem: clamp(0px, 40vw, 450px);
+  --heightItem: clamp(0px, 26.7vw, 300px);
   width: var(--widthItem);
   height: var(--heightItem);
   perspective: 1000px;
