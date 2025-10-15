@@ -322,7 +322,7 @@ body.galeria-page .hero-title {
   width: var(--widthItem);
   height: var(--heightItem);
   perspective: 1000px;
-  margin: 0 auto 9rem auto;
+  margin: 0 auto 12rem auto;
   overflow: visible;
 }
 
@@ -371,7 +371,7 @@ body.galeria-page .hero-title {
    controles do carrossel
 =========================== */
 .carrossel-controls {
-  margin-top: 37.5em;
+  margin-top: clamp(8rem, 45vw, 48.5em);
   display: flex;
   justify-content: center;
   position: absolute;
