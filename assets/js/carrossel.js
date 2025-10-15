@@ -1,10 +1,10 @@
-let isAutoRotating = true;
-let autoSpeed = 0.2;
-
 window.addEventListener("load", () => {
   if (window.innerWidth < 768) {
     return;
   }
+
+  let isAutoRotating = true;
+  let autoSpeed = 0.2;
 
   // ===========================
   // INJETANDO O TEMPLATE
@@ -222,5 +222,9 @@ window.addEventListener("load", () => {
   // INICIALIZAÇÃO
   createCarrossel();
   autoRotate();
-  window.addEventListener("resize", createCarrossel);
+  let resizeTimeout;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(createCarrossel, 200);
+  });
 });
