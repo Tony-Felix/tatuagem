@@ -34,6 +34,9 @@ window.addEventListener("load", () => {
   let isDragging = false;
   let hasMoved = false;
 
+  // NEW: id do requestAnimationFrame para controlar start/stop (evitar loop eterno). // CHANGED
+  let autoRotateId = null;
+
   // =============  CRIA O CARROSSEL ================
   function createCarrossel() {
     const total = items.length;
@@ -50,18 +53,47 @@ window.addEventListener("load", () => {
     });
   }
 
-  // ROTAÇÃO AUTOMÁTICA
+  // ROTAÇÃO AUTOMÁTICA — agora controlada (start/stop) para evitar chamadas inúteis de rAF. // CHANGED
   function autoRotate() {
+    // Só continua o loop se realmente estiver rotacionando e não estiver arrastando
     if (isAutoRotating && !isDragging) {
       rotateY -= autoSpeed;
       carrossel.style.setProperty("--rotatey", `${rotateY}deg`);
+      // agenda próximo frame e guarda o id
+      autoRotateId = requestAnimationFrame(autoRotate);
+    } else {
+      // não queremos manter o loop quando não estiver rotacionando
+      if (autoRotateId) {
+        cancelAnimationFrame(autoRotateId);
+        autoRotateId = null;
+      }
     }
-    requestAnimationFrame(autoRotate);
+  }
+
+  // NEW: funções utilitárias para iniciar/parar o loop de rotação automática. // CHANGED
+  function startAutoRotate() {
+    if (!autoRotateId) {
+      isAutoRotating = true;
+      // inicia o loop (autoRotate fará o rAF e guardar o id)
+      autoRotateId = requestAnimationFrame(autoRotate);
+    } else {
+      // garante flag caso estivesse apenas pausado sem id (defensivo)
+      isAutoRotating = true;
+    }
+  }
+
+  function stopAutoRotate() {
+    isAutoRotating = false;
+    if (autoRotateId) {
+      cancelAnimationFrame(autoRotateId);
+      autoRotateId = null;
+    }
   }
 
   // ============= FUNÇÕES DE CLICK E ARRASTE ================
   function onMouseDown(e) {
-    isAutoRotating = false;
+    // CHANGED: parar o loop em vez de apenas setar a flag
+    stopAutoRotate();
     isDragging = true;
     hasMoved = false;
     startX = e.clientX;
@@ -114,7 +146,8 @@ window.addEventListener("load", () => {
   // CENTRALIZA A IMAGEM CLICADA
   items.forEach((item, i) => {
     item.addEventListener("click", () => {
-      isAutoRotating = false;
+      // CHANGED: parar o loop em vez de apenas setar a flag
+      stopAutoRotate();
       items.forEach(it => it.classList.remove("active"));
 
       const total = items.length;
@@ -168,7 +201,8 @@ window.addEventListener("load", () => {
       }
 
       items.forEach(it => it.classList.remove("active"));
-      if (!isAutoRotating) isAutoRotating = true;
+      // CHANGED: se não estiver rotacionando, inicia o loop com startAutoRotate()
+      if (!isAutoRotating) startAutoRotate();
     });
   }
 
@@ -221,7 +255,8 @@ window.addEventListener("load", () => {
 
   // INICIALIZAÇÃO
   createCarrossel();
-  autoRotate();
+  // CHANGED: inicia o loop controlado em vez de chamar autoRotate() diretamente
+  startAutoRotate();
 
   let resizeTimeout;
   window.addEventListener("resize", () => {
