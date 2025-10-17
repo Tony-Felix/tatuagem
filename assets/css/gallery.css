@@ -191,6 +191,7 @@ body.galeria-page .hero-title {
   grid-template-columns: repeat(4, 1fr);
   gap: 0.625rem;
   max-width: 60rem;
+  min-width: 30rem;
   width: 100%;
   margin: 0 auto;
 }
@@ -215,15 +216,6 @@ body.galeria-page .hero-title {
   object-fit: cover;
   display: block;
 }
-
-.home .galeria-item img {
-  filter: grayscale(100%);
-}
-
-.ajuste-imgagens {
-  margin-top: 0rem;
-}
-
 
 /* ===================== LIGHTBOX ===================== */
 .lightbox {
