@@ -244,6 +244,53 @@ figcaption {
   --breakpoint-mobile: 480px;
 }
 
+/* ===================== FAQ ===================== */
+.faq-section {
+  padding-bottom: 0;
+  padding-top: 0%;
+  margin-top: 0%;
+}
+
+.faq-content {
+  column-count: 2;
+  gap: 3.75rem;
+  max-width: 65.6rem;
+  margin: 3.75rem auto 0;
+  padding: 0 2.5rem;
+}
+
+.faq-item dt {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+  color: #c2c2c2;
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
+}
+
+.faq-item dd {
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d6d6d6;
+  margin-bottom: 1.25rem;
+}
+
+.faq-item.break-column {
+  break-before: column;
+  page-break-before: column;
+}
+
+.faq-item:nth-last-child(2) {
+  margin-bottom: 1.875rem;
+}
+
+.faq-item:last-child {
+  margin-bottom: 5.625rem;
+}
+
 /* ===================== TABLET ===================== */
 @media (max-width: 1023px) {
   .consulta-btn {
@@ -319,6 +366,16 @@ figcaption {
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
     margin-right: auto;
+  }
+
+  .faq-content {
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+
+  .faq-item:nth-last-child(2),
+  .faq-item:last-child {
+    margin-bottom: 0;
   }
 
   .footer-spacer {
@@ -484,11 +541,25 @@ figcaption {
     display: none;
   }
 
-  /* FAQ */
   .faq-content {
-    column-count: 1;
-    gap: 1.5rem;
-    padding: 0 1rem;
+    display: none;
+  }
+
+  .faq-content-mobile {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+
+  .faq-content-mobile h3 {
+    font-size: 1.50rem;
+    line-height: 1.4;
+  }
+
+  .faq-item:nth-last-child(2),
+  .faq-item:last-child {
+    margin-bottom: 0;
   }
 
   /* Contatos */
