@@ -387,9 +387,12 @@ body.galeria-page .hero-title {
   width: 52px;
   height: 52px;
   display: block;
-  -webkit-user-drag: none; /* Chrome, Safari */
-  -webkit-user-select: none; /* Chrome, Safari */
-  user-select: none;         /* padrão */
+  -webkit-user-drag: none;
+  /* Chrome, Safari */
+  -webkit-user-select: none;
+  /* Chrome, Safari */
+  user-select: none;
+  /* padrão */
   pointer-events: none;
 }
 
@@ -420,9 +423,14 @@ body.galeria-page .hero-title {
 }
 
 /* SETAS DO CARROSSEL */
+.arrowSection {
+  position: relative;
+  width: 100%;
+}
+
 .arrow {
   position: absolute;
-  top: 227%;
+  margin-top: -325px;
   transform: translateY(-50%);
   font-size: 1.8rem;
   color: #ffffffed;
@@ -431,28 +439,48 @@ body.galeria-page .hero-title {
   padding: 0.5rem;
   animation: jumpForward 0.6s ease-out forwards;
   display: none;
-  -webkit-user-drag: none; /* Chrome, Safari */
-  -webkit-user-select: none; /* Chrome, Safari */
-  user-select: none;         /* padrão */
+  -webkit-user-drag: none;
+  /* Chrome, Safari */
+  -webkit-user-select: none;
+  /* Chrome, Safari */
+  user-select: none;
+  /* padrão */
   pointer-events: none;
 }
 
 .arrow.left {
-  left: 0.5rem;
+  left: 0vw;
 }
 
 .arrow.right {
-  right: 0.5rem;
+  right: 0vw;
 }
 
 .arrow:hover {
   transform: scale(1.2) translateY(-25px);
 }
 
+/* ===================== TABLET — GALERIA ===================== */
+@media (max-width: 1023px) {
+  .arrow {
+    font-size: 1.2rem;
+  }
+
+  .aura-section {
+    padding: 0 0 !important;
+    margin-top: 0 !important;
+  }
+}
+
 /* ===================== MOBILE — GALERIA ===================== */
 @media (max-width: 767px) {
   .carrossel {
     display: none;
+  }
+
+  #prevArrow,
+  #nextArrow {
+    display: none !important;
   }
 
   /* BOTÕES */
