@@ -375,11 +375,6 @@ figcaption {
     margin-bottom: 0;
   }
 
-  .footer-spacer {
-    height: 4rem;
-    /* controla o espaço entre FAQ e footer */
-  }
-
 }
 
 /* ===================== MOBILE ===================== */

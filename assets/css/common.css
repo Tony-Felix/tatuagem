@@ -123,11 +123,15 @@ address {
 
 /* ===================== FOOTER ===================== */
 .site-footer {
+  margin-top: 2rem;
   padding: 1.25rem;
   text-align: center;
   color: #bbb;
-  border-top: 1px solid rgba(255, 255, 255, 0.03);
 }
+
+.footer-spacer {
+    height: 4rem;
+  }
 
 .dev-link {
   color: inherit;
