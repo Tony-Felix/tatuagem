@@ -462,6 +462,10 @@ body.galeria-page .hero-title {
 
 /* ===================== TABLET — GALERIA ===================== */
 @media (max-width: 1023px) {
+  .hero-title {
+    -webkit-text-stroke: 2.5px;
+  }
+  
   .arrow {
     font-size: 1.2rem;
   }
@@ -474,6 +478,14 @@ body.galeria-page .hero-title {
 
 /* ===================== MOBILE — GALERIA ===================== */
 @media (max-width: 767px) {
+
+  .hero-title {
+    font-weight: 300;
+    -webkit-text-stroke: 1.5px;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    margin-top: 6rem;
+  }
   .carrossel {
     display: none;
   }
